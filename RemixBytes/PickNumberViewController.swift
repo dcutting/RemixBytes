@@ -10,14 +10,12 @@ class PickNumberViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        guard let destination = segue.destination as? PlayGameViewController else {
-            return
-        }
+        guard
+            let destination = segue.destination as? PlayGameViewController,
+            let text = numberTextField.text
+        else { return }
 
-        guard let text = numberTextField.text else { return }
-
-        let number = Int(text)
-        destination.number = number
         destination.game = game
+        destination.number = Int(text)
     }
 }

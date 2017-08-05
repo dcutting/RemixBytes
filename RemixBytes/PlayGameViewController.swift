@@ -24,14 +24,15 @@ class PlayGameViewController: UIViewController {
 
     private func spelledOutText() -> String {
         guard let number = number else { return "" }
+
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .spellOut
-        let spelledOutResult = numberFormatter.string(for: number) ?? ""
-        return spelledOutResult
+        return numberFormatter.string(for: number) ?? ""
     }
 
     private func primeText() -> String {
         guard let number = number else { return "" }
+
         let n = Int(number)
         let result = isPrime(n: n)
         return result ? "\(n) is prime\n🤓" : "\(n) is not prime\n😔"
