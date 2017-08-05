@@ -12,7 +12,7 @@
         <!--Pick Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PickGameViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PickGameViewController" id="BYZ-38-t0r" customClass="PickGameViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
         <!--Pick Number View Controller-->
         <scene sceneID="dl5-WV-Fz2">
             <objects>
-                <viewController id="cqm-fl-PhK" customClass="PickNumberViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PickNumberViewController" id="cqm-fl-PhK" customClass="PickNumberViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="buE-K8-Bi5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,7 +131,7 @@
         <!--Play Game View Controller-->
         <scene sceneID="s4s-0R-L72">
             <objects>
-                <viewController id="Wk2-O4-jLH" customClass="PlayGameViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayGameViewController" id="Wk2-O4-jLH" customClass="PlayGameViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s5H-Jf-Pvf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
