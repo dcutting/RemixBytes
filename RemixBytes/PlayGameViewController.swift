@@ -23,10 +23,29 @@ class PlayGameViewController: UIViewController {
     }
 
     private func spelledOutText() -> String {
-        return "spelled out \(number)"
+        guard let number = number else { return "" }
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .spellOut
+        let spelledOutResult = numberFormatter.string(for: number) ?? ""
+        return spelledOutResult
     }
 
     private func primeText() -> String {
-        return "\(number) is not prime"
+        guard let number = number else { return "" }
+        let n = Int(number)
+        let result = isPrime(n: n)
+        return result ? "\(n) is prime\n🤓" : "\(n) is not prime\n😔"
+    }
+
+    private func isPrime(n: Int) -> Bool {
+        guard n > 1 else { return false }
+        guard n > 3 else { return true }
+        guard n % 2 != 0, n % 3 != 0 else { return false }
+        var i = 5
+        while i * i <= n {
+            guard n % i != 0, n % (i + 2) != 0 else { return false }
+            i += 6
+        }
+        return true
     }
 }
