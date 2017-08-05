@@ -64,13 +64,21 @@
 				C83674A21F366E450084F644 /* PickGameViewController.swift */,
 				C836749D1F366C270084F644 /* PickNumberViewController.swift */,
 				C83674A11F366E450084F644 /* PlayGameViewController.swift */,
-				C83674A51F366F5B0084F644 /* ReplacementSegue.swift */,
 				C83674851F3664D00084F644 /* Main.storyboard */,
+				C83674A71F3680DA0084F644 /* Resources */,
+			);
+			path = RemixBytes;
+			sourceTree = "<group>";
+		};
+		C83674A71F3680DA0084F644 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				C83674881F3664D00084F644 /* Assets.xcassets */,
 				C836748A1F3664D00084F644 /* LaunchScreen.storyboard */,
 				C836748D1F3664D00084F644 /* Info.plist */,
+				C83674A51F366F5B0084F644 /* ReplacementSegue.swift */,
 			);
-			path = RemixBytes;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3H86HRS574;
-				INFOPLIST_FILE = RemixBytes/Info.plist;
+				INFOPLIST_FILE = RemixBytes/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.cutting.RemixBytes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,7 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3H86HRS574;
-				INFOPLIST_FILE = RemixBytes/Info.plist;
+				INFOPLIST_FILE = RemixBytes/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.cutting.RemixBytes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
