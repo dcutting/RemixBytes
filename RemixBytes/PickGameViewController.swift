@@ -2,11 +2,6 @@
 
 import UIKit
 
-enum Game {
-    case spelledOut
-    case prime
-}
-
 class PickGameViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
