@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pick Analyser View Controller-->
+        <!--Pick Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PickAnalyserViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PickGameViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,6 +32,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="cqm-fl-PhK" kind="custom" customClass="ReplacementSegue" customModule="RemixBytes" customModuleProvider="target" id="GcY-E0-xOg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOU-sm-LHU">
                                 <rect key="frame" x="16" y="112" width="343" height="60"/>
@@ -40,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="60" id="Nwb-vX-Of8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
-                                <state key="normal" title="Prime">
+                                <state key="normal" title="Prime?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -48,6 +51,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="cqm-fl-PhK" kind="custom" customClass="ReplacementSegue" customModule="RemixBytes" customModuleProvider="target" id="cO9-Nq-d3K"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,5 +72,115 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
+        <!--Pick Number View Controller-->
+        <scene sceneID="dl5-WV-Fz2">
+            <objects>
+                <viewController id="cqm-fl-PhK" customClass="PickNumberViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="buE-K8-Bi5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0p6-Yg-Uje">
+                                <rect key="frame" x="16" y="36" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="WOr-t2-abi"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoB-bF-qJs">
+                                <rect key="frame" x="16" y="112" width="343" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="R8o-w6-C8W"/>
+                                    <constraint firstAttribute="height" constant="60" id="yZo-2N-GFH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Wk2-O4-jLH" kind="custom" customClass="ReplacementSegue" customModule="RemixBytes" customModuleProvider="target" id="Y87-wa-QHh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CiQ-lY-QwF" firstAttribute="trailing" secondItem="0p6-Yg-Uje" secondAttribute="trailing" constant="16" id="0Bf-2u-HYN"/>
+                            <constraint firstItem="LoB-bF-qJs" firstAttribute="top" secondItem="0p6-Yg-Uje" secondAttribute="bottom" constant="16" id="1VE-FX-Yt7"/>
+                            <constraint firstItem="0p6-Yg-Uje" firstAttribute="top" secondItem="CiQ-lY-QwF" secondAttribute="top" constant="16" id="BFo-md-tah"/>
+                            <constraint firstItem="0p6-Yg-Uje" firstAttribute="leading" secondItem="CiQ-lY-QwF" secondAttribute="leading" constant="16" id="NtR-7v-GNO"/>
+                            <constraint firstItem="LoB-bF-qJs" firstAttribute="leading" secondItem="CiQ-lY-QwF" secondAttribute="leading" constant="16" id="PPN-Af-2hk"/>
+                            <constraint firstItem="CiQ-lY-QwF" firstAttribute="trailing" secondItem="LoB-bF-qJs" secondAttribute="trailing" constant="16" id="ifg-gN-AOd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CiQ-lY-QwF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1t-sl-ZyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.79999999999995" y="136.28185907046478"/>
+        </scene>
+        <!--Play Game View Controller-->
+        <scene sceneID="s4s-0R-L72">
+            <objects>
+                <viewController id="Wk2-O4-jLH" customClass="PlayGameViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s5H-Jf-Pvf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reA-WI-nTt">
+                                <rect key="frame" x="16" y="36" width="343" height="539"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teC-Vu-OFU">
+                                <rect key="frame" x="16" y="591" width="343" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Oqm-7y-yJL"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="abb-kl-0k6"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="i5J-1r-RKW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="ReplacementSegue" customModule="RemixBytes" customModuleProvider="target" id="mTo-UP-bAs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EXZ-e1-OuV" firstAttribute="trailing" secondItem="reA-WI-nTt" secondAttribute="trailing" constant="16" id="67V-kW-whg"/>
+                            <constraint firstItem="reA-WI-nTt" firstAttribute="top" secondItem="EXZ-e1-OuV" secondAttribute="top" constant="16" id="6gh-bE-WHe"/>
+                            <constraint firstItem="teC-Vu-OFU" firstAttribute="leading" secondItem="EXZ-e1-OuV" secondAttribute="leading" constant="16" id="I6F-51-a9d"/>
+                            <constraint firstItem="EXZ-e1-OuV" firstAttribute="bottom" secondItem="teC-Vu-OFU" secondAttribute="bottom" constant="16" id="haI-TB-uZ8"/>
+                            <constraint firstItem="teC-Vu-OFU" firstAttribute="top" secondItem="reA-WI-nTt" secondAttribute="bottom" constant="16" id="qJA-BV-iUm"/>
+                            <constraint firstItem="EXZ-e1-OuV" firstAttribute="trailing" secondItem="teC-Vu-OFU" secondAttribute="trailing" constant="16" id="uTG-vm-UDy"/>
+                            <constraint firstItem="reA-WI-nTt" firstAttribute="leading" secondItem="EXZ-e1-OuV" secondAttribute="leading" constant="16" id="upK-Xw-VHd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EXZ-e1-OuV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rfy-oi-W8k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840.8" y="136.28185907046478"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GcY-E0-xOg"/>
+    </inferredMetricsTieBreakers>
 </document>

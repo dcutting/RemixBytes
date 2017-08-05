@@ -2,5 +2,6 @@
 
 import UIKit
 
-class PickAnalyserViewController: UIViewController {
+class PlayGameViewController: UIViewController {
+
 }
