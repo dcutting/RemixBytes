@@ -33,7 +33,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="cqm-fl-PhK" kind="custom" customClass="ReplacementSegue" customModule="RemixBytes" customModuleProvider="target" id="GcY-E0-xOg"/>
+                                    <segue destination="cqm-fl-PhK" kind="custom" identifier="Spelled Out" customClass="ReplacementSegue" customModule="RemixBytes" customModuleProvider="target" id="GcY-E0-xOg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOU-sm-LHU">
@@ -52,7 +52,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="cqm-fl-PhK" kind="custom" customClass="ReplacementSegue" customModule="RemixBytes" customModuleProvider="target" id="cO9-Nq-d3K"/>
+                                    <segue destination="cqm-fl-PhK" kind="custom" identifier="Prime" customClass="ReplacementSegue" customModule="RemixBytes" customModuleProvider="target" id="cO9-Nq-d3K"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,6 +121,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CiQ-lY-QwF"/>
                     </view>
+                    <connections>
+                        <outlet property="numberTextField" destination="0p6-Yg-Uje" id="nQc-iZ-ZFg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1t-sl-ZyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,7 +137,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reA-WI-nTt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reA-WI-nTt">
                                 <rect key="frame" x="16" y="36" width="343" height="539"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -174,6 +177,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EXZ-e1-OuV"/>
                     </view>
+                    <connections>
+                        <outlet property="outputLabel" destination="reA-WI-nTt" id="THK-WU-idt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rfy-oi-W8k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,6 +187,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GcY-E0-xOg"/>
+        <segue reference="cO9-Nq-d3K"/>
     </inferredMetricsTieBreakers>
 </document>
