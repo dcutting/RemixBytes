@@ -99,14 +99,12 @@ extension GameCoordinator: PlayGameViewControllerDelegate {
 extension GameCoordinator {
 
     private func playGame() {
-
         let result = findGameResult()
         let viewData = prepare(result: result)
         playGameView?.viewData = viewData
     }
 
     private func findGameResult() -> GameResult {
-
         switch game {
         case .none:
             return .none
