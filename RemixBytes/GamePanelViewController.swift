@@ -2,14 +2,14 @@
 
 import UIKit
 
-class GamePanelViewControllerFactory {
-    func make() -> GamePanelViewController {
+class GamePanelViewControllerFactory: GamePanelViewFactory {
+    func make() -> GamePanelView {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "GamePanelViewController") as! GamePanelViewController
+        return storyboard.instantiateViewController(withIdentifier: "GamePanelViewController") as! GamePanelView
     }
 }
 
-class GamePanelViewController: UIViewController, Viewable {
+class GamePanelViewController: UIViewController, GamePanelView {
 
     @IBOutlet weak var topLeftContainer: UIView!
     @IBOutlet weak var bottomLeftContainer: UIView!

@@ -3,13 +3,19 @@
 class GameCoordinator {
 
     private var window: WindowWireframe?
-    private let pickGameViewFactory = PickGameViewControllerFactory()
-    private let pickNumberViewFactory = PickNumberViewControllerFactory()
-    private let playGameViewFactory = PlayGameViewControllerFactory()
+    private let pickGameViewFactory: PickGameViewFactory
+    private let pickNumberViewFactory: PickNumberViewFactory
+    private let playGameViewFactory: PlayGameViewFactory
     private let gameInteractor = GameInteractor()
     private let playGameFormatter = PlayGameFormatter()
 
     private var playGameView: PlayGameView?
+
+    init(pickGameViewFactory: PickGameViewFactory, pickNumberViewFactory: PickNumberViewFactory, playGameViewFactory: PlayGameViewFactory) {
+        self.pickGameViewFactory = pickGameViewFactory
+        self.pickNumberViewFactory = pickNumberViewFactory
+        self.playGameViewFactory = playGameViewFactory
+    }
 
     func start(window: WindowWireframe) {
         self.window = window

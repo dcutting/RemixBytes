@@ -28,7 +28,20 @@
 		C85311781F3746E600388356 /* PlayGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311771F3746E600388356 /* PlayGameView.swift */; };
 		C853117A1F3749A300388356 /* WindowWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311791F3749A300388356 /* WindowWireframe.swift */; };
 		C853117C1F3749CA00388356 /* UIWindowWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C853117B1F3749CA00388356 /* UIWindowWireframe.swift */; };
+		C85311841F374BBE00388356 /* LogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311831F374BBE00388356 /* LogicTests.swift */; };
 		C853118A1F374C1C00388356 /* PickGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311891F374C1C00388356 /* PickGameView.swift */; };
+		C853118B1F374DC400388356 /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CF61F3683310072257F /* GameCoordinator.swift */; };
+		C853118C1F374DC400388356 /* GamePanelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CF81F36999E0072257F /* GamePanelCoordinator.swift */; };
+		C853118D1F374DC400388356 /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CFC1F371CC00072257F /* GameInteractor.swift */; };
+		C853118E1F374DC400388356 /* PlayGameFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CFE1F3730830072257F /* PlayGameFormatter.swift */; };
+		C853118F1F374DC400388356 /* PickGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311891F374C1C00388356 /* PickGameView.swift */; };
+		C85311901F374DC400388356 /* PickNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1D001F37403D0072257F /* PickNumberView.swift */; };
+		C85311911F374DC400388356 /* PlayGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311771F3746E600388356 /* PlayGameView.swift */; };
+		C85311931F374DC400388356 /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1D021F3741C70072257F /* Viewable.swift */; };
+		C85311941F374DC400388356 /* WindowWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311791F3749A300388356 /* WindowWireframe.swift */; };
+		C85311981F379D5800388356 /* UIViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311971F379D5800388356 /* UIViewable.swift */; };
+		C853119A1F37A00900388356 /* GamePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311991F37A00900388356 /* GamePanelView.swift */; };
+		C853119B1F37A00900388356 /* GamePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311991F37A00900388356 /* GamePanelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +70,12 @@
 		C85311771F3746E600388356 /* PlayGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameView.swift; sourceTree = "<group>"; };
 		C85311791F3749A300388356 /* WindowWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowWireframe.swift; sourceTree = "<group>"; };
 		C853117B1F3749CA00388356 /* UIWindowWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowWireframe.swift; sourceTree = "<group>"; };
+		C85311811F374BBE00388356 /* LogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C85311831F374BBE00388356 /* LogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicTests.swift; sourceTree = "<group>"; };
+		C85311851F374BBE00388356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C85311891F374C1C00388356 /* PickGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameView.swift; sourceTree = "<group>"; };
+		C85311971F379D5800388356 /* UIViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewable.swift; sourceTree = "<group>"; };
+		C85311991F37A00900388356 /* GamePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePanelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +84,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0556DD7E0633CCCCD2EFF11E /* Pods_RemixBytes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C853117E1F374BBE00388356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				C83674801F3664D00084F644 /* RemixBytes */,
+				C85311821F374BBE00388356 /* LogicTests */,
 				C836747F1F3664D00084F644 /* Products */,
 				AF5A51A76797317153E710DD /* Pods */,
 				16A81E9C6A6334A32D8F66AA /* Frameworks */,
@@ -103,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				C836747E1F3664D00084F644 /* RemixBytes.app */,
+				C85311811F374BBE00388356 /* LogicTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +150,7 @@
 				C85311771F3746E600388356 /* PlayGameView.swift */,
 				C83674A11F366E450084F644 /* PlayGameViewController.swift */,
 				C85311751F3746B500388356 /* PlayGameContinuousViewController.swift */,
+				C85311991F37A00900388356 /* GamePanelView.swift */,
 				C84B1CFA1F369C640072257F /* GamePanelViewController.swift */,
 				C83674851F3664D00084F644 /* Main.storyboard */,
 				C83674A71F3680DA0084F644 /* Resources */,
@@ -138,11 +166,20 @@
 				C836748D1F3664D00084F644 /* Info.plist */,
 				C83674A51F366F5B0084F644 /* ReplacementSegue.swift */,
 				C84B1D021F3741C70072257F /* Viewable.swift */,
+				C85311971F379D5800388356 /* UIViewable.swift */,
 				C85311791F3749A300388356 /* WindowWireframe.swift */,
 				C853117B1F3749CA00388356 /* UIWindowWireframe.swift */,
-				C85311951F374DFC00388356 /* UIViewable.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C85311821F374BBE00388356 /* LogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				C85311831F374BBE00388356 /* LogicTests.swift */,
+				C85311851F374BBE00388356 /* Info.plist */,
+			);
+			path = LogicTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +205,23 @@
 			productReference = C836747E1F3664D00084F644 /* RemixBytes.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C85311801F374BBE00388356 /* LogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85311861F374BBE00388356 /* Build configuration list for PBXNativeTarget "LogicTests" */;
+			buildPhases = (
+				C853117D1F374BBE00388356 /* Sources */,
+				C853117E1F374BBE00388356 /* Frameworks */,
+				C853117F1F374BBE00388356 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogicTests;
+			productName = LogicTests;
+			productReference = C85311811F374BBE00388356 /* LogicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -179,6 +233,9 @@
 				ORGANIZATIONNAME = cutting.io;
 				TargetAttributes = {
 					C836747D1F3664D00084F644 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					C85311801F374BBE00388356 = {
 						CreatedOnToolsVersion = 9.0;
 					};
 				};
@@ -197,6 +254,7 @@
 			projectRoot = "";
 			targets = (
 				C836747D1F3664D00084F644 /* RemixBytes */,
+				C85311801F374BBE00388356 /* LogicTests */,
 			);
 		};
 /* End PBXProject section */
@@ -209,6 +267,13 @@
 				C836748C1F3664D00084F644 /* LaunchScreen.storyboard in Resources */,
 				C83674891F3664D00084F644 /* Assets.xcassets in Resources */,
 				C83674871F3664D00084F644 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C853117F1F374BBE00388356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +339,7 @@
 				C84B1CFD1F371CC00072257F /* GameInteractor.swift in Sources */,
 				C84B1D031F3741C70072257F /* Viewable.swift in Sources */,
 				C84B1CFF1F3730830072257F /* PlayGameFormatter.swift in Sources */,
+				C853119A1F37A00900388356 /* GamePanelView.swift in Sources */,
 				C84B1D051F3742C50072257F /* PickNumberContinuousViewController.swift in Sources */,
 				C84B1D011F37403D0072257F /* PickNumberView.swift in Sources */,
 				C84B1CF91F36999E0072257F /* GamePanelCoordinator.swift in Sources */,
@@ -282,9 +348,28 @@
 				C853117A1F3749A300388356 /* WindowWireframe.swift in Sources */,
 				C836749E1F366C270084F644 /* PickNumberViewController.swift in Sources */,
 				C83674A31F366E450084F644 /* PlayGameViewController.swift in Sources */,
+				C85311981F379D5800388356 /* UIViewable.swift in Sources */,
 				C83674A61F366F5B0084F644 /* ReplacementSegue.swift in Sources */,
 				C83674821F3664D00084F644 /* AppDelegate.swift in Sources */,
 				C85311761F3746B500388356 /* PlayGameContinuousViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C853117D1F374BBE00388356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85311911F374DC400388356 /* PlayGameView.swift in Sources */,
+				C853118D1F374DC400388356 /* GameInteractor.swift in Sources */,
+				C85311931F374DC400388356 /* Viewable.swift in Sources */,
+				C853119B1F37A00900388356 /* GamePanelView.swift in Sources */,
+				C853118B1F374DC400388356 /* GameCoordinator.swift in Sources */,
+				C85311901F374DC400388356 /* PickNumberView.swift in Sources */,
+				C85311941F374DC400388356 /* WindowWireframe.swift in Sources */,
+				C85311841F374BBE00388356 /* LogicTests.swift in Sources */,
+				C853118C1F374DC400388356 /* GamePanelCoordinator.swift in Sources */,
+				C853118E1F374DC400388356 /* PlayGameFormatter.swift in Sources */,
+				C853118F1F374DC400388356 /* PickGameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +532,38 @@
 			};
 			name = Release;
 		};
+		C85311871F374BBE00388356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3H86HRS574;
+				INFOPLIST_FILE = LogicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = io.cutting.LogicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C85311881F374BBE00388356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3H86HRS574;
+				INFOPLIST_FILE = LogicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = io.cutting.LogicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -464,6 +581,15 @@
 			buildConfigurations = (
 				C83674911F3664D00084F644 /* Debug */,
 				C83674921F3664D00084F644 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85311861F374BBE00388356 /* Build configuration list for PBXNativeTarget "LogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85311871F374BBE00388356 /* Debug */,
+				C85311881F374BBE00388356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

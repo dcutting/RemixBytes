@@ -2,17 +2,25 @@
 
 class GamePanelCoordinator {
 
-    private var gamePanelView: GamePanelViewController?
-    private let pickGameViewFactory = PickGameViewControllerFactory()
-    private let pickNumberViewFactory = PickNumberContinuousViewControllerFactory()
-    private let playGameViewFactory = PlayGameContinuousViewControllerFactory()
+    private let gamePanelViewFactory: GamePanelViewFactory
+    private let pickGameViewFactory: PickGameViewFactory
+    private let pickNumberViewFactory: PickNumberViewFactory
+    private let playGameViewFactory: PlayGameViewFactory
     private let gameInteractor = GameInteractor()
     private let playGameFormatter = PlayGameFormatter()
 
+    private var gamePanelView: GamePanelView?
     private var playGameView: PlayGameView?
 
+    init(gamePanelViewFactory: GamePanelViewFactory, pickGameViewFactory: PickGameViewFactory, pickNumberViewFactory: PickNumberViewFactory, playGameViewFactory: PlayGameViewFactory) {
+        self.gamePanelViewFactory = gamePanelViewFactory
+        self.pickGameViewFactory = pickGameViewFactory
+        self.pickNumberViewFactory = pickNumberViewFactory
+        self.playGameViewFactory = playGameViewFactory
+    }
+
     func start(window: WindowWireframe) {
-        gamePanelView = GamePanelViewControllerFactory().make()
+        gamePanelView = gamePanelViewFactory.make()
         window.rootView = gamePanelView
 
         showPanel()
