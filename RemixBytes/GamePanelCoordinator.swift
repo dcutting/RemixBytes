@@ -2,7 +2,7 @@
 
 class GamePanelCoordinator {
 
-    private var container: GamePanelContainer?
+    private var gamePanelView: GamePanelViewController?
     private let pickGameViewFactory = PickGameViewControllerFactory()
     private let pickNumberViewFactory = PickNumberContinuousViewControllerFactory()
     private let playGameViewFactory = PlayGameContinuousViewControllerFactory()
@@ -12,8 +12,8 @@ class GamePanelCoordinator {
     private var playGameView: PlayGameView?
 
     func start(window: WindowWireframe) {
-        container = GamePanelContainerFactory().make()
-        window.rootView = container
+        gamePanelView = GamePanelViewControllerFactory().make()
+        window.rootView = gamePanelView
 
         showPanel()
         updatePlayGameView()
@@ -28,18 +28,18 @@ class GamePanelCoordinator {
     private func loadPickGameView() {
         var view = pickGameViewFactory.make()
         view.delegate = self
-        container?.topLeft = view
+        gamePanelView?.topLeft = view
     }
 
     private func loadPickNumberView() {
         var view = pickNumberViewFactory.make()
         view.delegate = self
-        container?.bottomLeft = view
+        gamePanelView?.bottomLeft = view
     }
 
     private func loadPlayGameView() {
         let view = playGameViewFactory.make()
-        container?.right = view
+        gamePanelView?.right = view
         self.playGameView = view
     }
 
