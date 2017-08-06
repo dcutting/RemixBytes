@@ -112,15 +112,9 @@
 				C84B1CFC1F371CC00072257F /* GameInteractor.swift */,
 				C84B1CFE1F3730830072257F /* PlayGameFormatter.swift */,
 				C85311891F374C1C00388356 /* PickGameView.swift */,
-				C83674A21F366E450084F644 /* PickGameViewController.swift */,
 				C84B1D001F37403D0072257F /* PickNumberView.swift */,
-				C836749D1F366C270084F644 /* PickNumberViewController.swift */,
-				C84B1D041F3742C50072257F /* PickNumberContinuousViewController.swift */,
 				C85311771F3746E600388356 /* PlayGameView.swift */,
-				C83674A11F366E450084F644 /* PlayGameViewController.swift */,
-				C85311751F3746B500388356 /* PlayGameContinuousViewController.swift */,
-				C84B1CFA1F369C640072257F /* GamePanelViewController.swift */,
-				C83674851F3664D00084F644 /* Main.storyboard */,
+				C85ED8F41F37CDDE0037F230 /* UIKit */,
 				C83674A71F3680DA0084F644 /* Resources */,
 			);
 			path = RemixBytes;
@@ -136,6 +130,20 @@
 				C84B1D021F3741C70072257F /* Viewable.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C85ED8F41F37CDDE0037F230 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				C84B1CFA1F369C640072257F /* GamePanelViewController.swift */,
+				C83674A21F366E450084F644 /* PickGameViewController.swift */,
+				C836749D1F366C270084F644 /* PickNumberViewController.swift */,
+				C84B1D041F3742C50072257F /* PickNumberContinuousViewController.swift */,
+				C83674A11F366E450084F644 /* PlayGameViewController.swift */,
+				C85311751F3746B500388356 /* PlayGameContinuousViewController.swift */,
+				C83674851F3664D00084F644 /* Main.storyboard */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
