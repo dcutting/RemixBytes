@@ -2,6 +2,18 @@
 
 import UIKit
 
+enum Game {
+    case none
+    case spelledOut
+    case prime
+}
+
+enum GameResult {
+    case none
+    case spelledOut(Int)
+    case prime(Int, Bool)
+}
+
 class PlayGameViewController: UIViewController {
 
     @IBOutlet weak var outputLabel: UILabel!
@@ -12,28 +24,44 @@ class PlayGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let result = playGame()
+        let outputText = prepare(result: result)
+        outputLabel.text = outputText
+    }
+
+    private func playGame() -> GameResult {
+
         switch game {
         case .none:
-            outputLabel.text = ""
+            return .none
         case .spelledOut:
-            outputLabel.text = spelledOutText()
+            return .spelledOut(number)
         case .prime:
-            outputLabel.text = primeText()
+            return .prime(number, isPrime(n: number))
         }
     }
 
-    private func spelledOutText() -> String {
+    private func prepare(result: GameResult) -> String {
+        let outputText: String
+        switch result {
+        case .none:
+            outputText = ""
+        case let .spelledOut(number):
+            outputText = spelledOutText(number: number)
+        case let .prime(number, isPrime):
+            outputText = primeText(number: number, isPrime: isPrime)
+        }
+        return outputText
+    }
 
+    private func spelledOutText(number: Int) -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .spellOut
         return numberFormatter.string(for: number) ?? ""
     }
 
-    private func primeText() -> String {
-
-        let n = Int(number)
-        let result = isPrime(n: n)
-        return result ? "\(n) is prime\n🤓" : "\(n) is not prime\n😔"
+    private func primeText(number: Int, isPrime: Bool) -> String {
+        return isPrime ? "\(number) is prime\n🤓" : "\(number) is not prime\n😔"
     }
 
     private func isPrime(n: Int) -> Bool {
