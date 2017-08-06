@@ -2,19 +2,14 @@
 
 import UIKit
 
-class PickGameViewControllerFactory {
-    func make() -> PickGameViewController {
+class PickGameViewControllerFactory: PickGameViewFactory {
+    func make() -> PickGameView {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "PickGameViewController") as! PickGameViewController
     }
 }
 
-protocol PickGameViewDelegate: class {
-    func didPickSpelledOut()
-    func didPickPrime()
-}
-
-class PickGameViewController: UIViewController, Viewable {
+class PickGameViewController: UIViewController, PickGameView {
 
     weak var delegate: PickGameViewDelegate?
 
