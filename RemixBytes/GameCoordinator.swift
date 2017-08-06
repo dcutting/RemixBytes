@@ -31,7 +31,7 @@ class GameCoordinator {
 extension GameCoordinator: PickGameViewDelegate {
 
     private func showPickGameView() {
-        var pickGameView = pickGameViewFactory.make()
+        let pickGameView = pickGameViewFactory.make()
         pickGameView.delegate = self
         show(view: pickGameView)
     }
@@ -54,7 +54,7 @@ extension GameCoordinator: PickGameViewDelegate {
 extension GameCoordinator: PickNumberViewDelegate {
 
     private func showPickNumberView() {
-        var pickNumberView = pickNumberViewFactory.make()
+        let pickNumberView = pickNumberViewFactory.make()
         pickNumberView.delegate = self
         show(view: pickNumberView)
     }
@@ -72,7 +72,7 @@ extension GameCoordinator: PickNumberViewDelegate {
 extension GameCoordinator: PlayGameViewDelegate {
 
     private func showPlayGameView() {
-        var playGameView = playGameViewFactory.make()
+        let playGameView = playGameViewFactory.make()
         playGameView.delegate = self
         self.playGameView = playGameView
         show(view: playGameView)
