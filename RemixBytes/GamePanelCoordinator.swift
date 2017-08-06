@@ -28,13 +28,13 @@ class GamePanelCoordinator {
     }
 
     private func loadPickGameView() {
-        var view = pickGameViewFactory.make()
+        let view = pickGameViewFactory.make()
         view.delegate = self
         gamePanelView?.topLeft = view
     }
 
     private func loadPickNumberView() {
-        var view = pickNumberViewFactory.make()
+        let view = pickNumberViewFactory.make()
         view.delegate = self
         gamePanelView?.bottomLeft = view
     }

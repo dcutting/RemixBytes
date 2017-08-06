@@ -2,7 +2,7 @@
 
 import UIKit
 
-protocol Viewable {}
+protocol Viewable: class {}
 
 extension Viewable {
     var viewController: UIViewController? {
