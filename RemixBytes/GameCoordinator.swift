@@ -9,6 +9,7 @@ class GameCoordinator {
     private let pickNumberViewFactory = PickNumberViewFactory()
     private let playGameViewFactory = PlayGameViewFactory()
     private let gameInteractor = GameInteractor()
+    private let playGameFormatter = PlayGameFormatter()
 
     private var playGameView: PlayGameViewController?
 
@@ -89,31 +90,8 @@ extension GameCoordinator {
 
     private func playGame() {
         let result = gameInteractor.findGameResult()
-        let viewData = prepare(result: result)
+        let viewData = playGameFormatter.prepare(result: result)
         playGameView?.viewData = viewData
-    }
-
-    private func prepare(result: GameResult) -> PlayGameViewData {
-        let outputText: String
-        switch result {
-        case .none:
-            outputText = ""
-        case let .spelledOut(number):
-            outputText = spelledOutText(number: number)
-        case let .prime(number, isPrime):
-            outputText = primeText(number: number, isPrime: isPrime)
-        }
-        return PlayGameViewData(outputText: outputText)
-    }
-
-    private func spelledOutText(number: Int) -> String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .spellOut
-        return numberFormatter.string(for: number) ?? ""
-    }
-
-    private func primeText(number: Int, isPrime: Bool) -> String {
-        return isPrime ? "\(number) is prime\n🤓" : "\(number) is not prime\n😔"
     }
 }
 
