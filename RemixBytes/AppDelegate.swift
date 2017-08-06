@@ -20,26 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func start(window: UIWindow) {
-
-        let gamePanelViewFactory = GamePanelViewControllerFactory()
-        let pickGameViewFactory = PickGameViewControllerFactory()
-        let pickNumberViewFactory = PickNumberContinuousViewControllerFactory()
-        let playGameViewFactory = PlayGameContinuousViewControllerFactory()
-
         if UI_USER_INTERFACE_IDIOM() == .pad {
             let coordinator = GamePanelCoordinator(
-                gamePanelViewFactory: gamePanelViewFactory,
-                pickGameViewFactory: pickGameViewFactory,
-                pickNumberViewFactory: pickNumberViewFactory,
-                playGameViewFactory: playGameViewFactory
+                gamePanelViewFactory: GamePanelViewControllerFactory(),
+                pickGameViewFactory: PickGameViewControllerFactory(),
+                pickNumberViewFactory: PickNumberContinuousViewControllerFactory(),
+                playGameViewFactory: PlayGameContinuousViewControllerFactory()
             )
             coordinator.start(window: window)
             self.coordinator = coordinator
         } else {
             let coordinator = GameCoordinator(
-                pickGameViewFactory: pickGameViewFactory,
-                pickNumberViewFactory: pickNumberViewFactory,
-                playGameViewFactory: playGameViewFactory
+                pickGameViewFactory: PickGameViewControllerFactory(),
+                pickNumberViewFactory: PickNumberViewControllerFactory(),
+                playGameViewFactory: PlayGameViewControllerFactory()
             )
             coordinator.start(window: window)
             self.coordinator = coordinator
