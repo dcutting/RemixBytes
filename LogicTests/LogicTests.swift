@@ -3,27 +3,56 @@
 import XCTest
 
 class LogicTests: XCTestCase {
-    
+
+    var fakePickGameView: PickGameView!
+    var fakePickNumberView: PickNumberView!
+    var fakePlayGameView: PlayGameView!
+
+    var fakePickGameViewFactory: FakePickGameViewFactory!
+    var fakePickNumberViewFactory: FakePickNumberViewFactory!
+    var fakePlayGameViewFactory: FakePlayGameViewFactory!
+
+    var fakeWindow: FakeWindowWireframe!
+
+    var coordinator: GameCoordinator!
+
     override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        fakePickGameView = FakePickGameView()
+        fakePickNumberView = FakePickNumberView()
+        fakePlayGameView = FakePlayGameView()
+
+        fakePickGameViewFactory = FakePickGameViewFactory(fake: fakePickGameView)
+        fakePickNumberViewFactory = FakePickNumberViewFactory(fake: fakePickNumberView)
+        fakePlayGameViewFactory = FakePlayGameViewFactory(fake: fakePlayGameView)
+
+        coordinator = GameCoordinator(
+            pickGameViewFactory: fakePickGameViewFactory,
+            pickNumberViewFactory: fakePickNumberViewFactory,
+            playGameViewFactory: fakePlayGameViewFactory
+        )
+
+        fakeWindow = FakeWindowWireframe()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func test_primeFlow() {
+
+        coordinator.start(window: fakeWindow)
+
+        XCTAssertEqual(fakePickGameView, fakeWindow.rootView)
+
+        fakePickGameView.delegate?.didPickPrime()
+
+        XCTAssertEqual(fakePickNumberView, fakeWindow.rootView)
+
+        fakePickNumberView.delegate?.didPick(number: 7)
+
+        let actual = fakePlayGameView.viewData
+        let expected = "7 is prime\n🤓"
+        XCTAssertEqual(expected, actual?.outputText)
+
+        fakePlayGameView.delegate?.didTapOK()
+
+        XCTAssertEqual(fakePickGameView, fakeWindow.rootView)
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

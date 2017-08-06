@@ -42,6 +42,8 @@
 		C85311981F379D5800388356 /* UIViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311971F379D5800388356 /* UIViewable.swift */; };
 		C853119A1F37A00900388356 /* GamePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311991F37A00900388356 /* GamePanelView.swift */; };
 		C853119B1F37A00900388356 /* GamePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311991F37A00900388356 /* GamePanelView.swift */; };
+		C853119D1F37ABF900388356 /* Fakes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C853119C1F37ABF900388356 /* Fakes.swift */; };
+		C853119E1F37ABF900388356 /* Fakes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C853119C1F37ABF900388356 /* Fakes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,7 @@
 		C85311891F374C1C00388356 /* PickGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameView.swift; sourceTree = "<group>"; };
 		C85311971F379D5800388356 /* UIViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewable.swift; sourceTree = "<group>"; };
 		C85311991F37A00900388356 /* GamePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePanelView.swift; sourceTree = "<group>"; };
+		C853119C1F37ABF900388356 /* Fakes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fakes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				C85311831F374BBE00388356 /* LogicTests.swift */,
+				C853119C1F37ABF900388356 /* Fakes.swift */,
 				C85311851F374BBE00388356 /* Info.plist */,
 			);
 			path = LogicTests;
@@ -349,6 +353,7 @@
 				C836749E1F366C270084F644 /* PickNumberViewController.swift in Sources */,
 				C83674A31F366E450084F644 /* PlayGameViewController.swift in Sources */,
 				C85311981F379D5800388356 /* UIViewable.swift in Sources */,
+				C853119D1F37ABF900388356 /* Fakes.swift in Sources */,
 				C83674A61F366F5B0084F644 /* ReplacementSegue.swift in Sources */,
 				C83674821F3664D00084F644 /* AppDelegate.swift in Sources */,
 				C85311761F3746B500388356 /* PlayGameContinuousViewController.swift in Sources */,
@@ -367,6 +372,7 @@
 				C85311901F374DC400388356 /* PickNumberView.swift in Sources */,
 				C85311941F374DC400388356 /* WindowWireframe.swift in Sources */,
 				C85311841F374BBE00388356 /* LogicTests.swift in Sources */,
+				C853119E1F37ABF900388356 /* Fakes.swift in Sources */,
 				C853118C1F374DC400388356 /* GamePanelCoordinator.swift in Sources */,
 				C853118E1F374DC400388356 /* PlayGameFormatter.swift in Sources */,
 				C853118F1F374DC400388356 /* PickGameView.swift in Sources */,
