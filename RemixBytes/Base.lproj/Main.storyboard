@@ -100,8 +100,8 @@
                                     <action selector="didTapGo:" destination="cqm-fl-PhK" eventType="touchUpInside" id="Iew-rB-ZNy"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0p6-Yg-Uje">
-                                <rect key="frame" x="16" y="112" width="288" height="60"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0p6-Yg-Uje">
+                                <rect key="frame" x="16" y="112" width="343" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="WOr-t2-abi"/>
                                 </constraints>
