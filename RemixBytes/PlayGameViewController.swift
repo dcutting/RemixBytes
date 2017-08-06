@@ -6,15 +6,15 @@ class PlayGameViewController: UIViewController {
 
     @IBOutlet weak var outputLabel: UILabel!
     
-    var game: Game?
-    var number: Int?
+    var game = Game.none
+    var number = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let game = game else { return }
-
         switch game {
+        case .none:
+            outputLabel.text = ""
         case .spelledOut:
             outputLabel.text = spelledOutText()
         case .prime:
@@ -23,7 +23,6 @@ class PlayGameViewController: UIViewController {
     }
 
     private func spelledOutText() -> String {
-        guard let number = number else { return "" }
 
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .spellOut
@@ -31,7 +30,6 @@ class PlayGameViewController: UIViewController {
     }
 
     private func primeText() -> String {
-        guard let number = number else { return "" }
 
         let n = Int(number)
         let result = isPrime(n: n)

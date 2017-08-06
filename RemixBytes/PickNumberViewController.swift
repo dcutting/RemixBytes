@@ -6,7 +6,7 @@ class PickNumberViewController: UIViewController {
 
     @IBOutlet weak var numberTextField: UITextField!
     
-    var game: Game?
+    var game = Game.none
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
@@ -16,6 +16,6 @@ class PickNumberViewController: UIViewController {
         else { return }
 
         destination.game = game
-        destination.number = Int(text)
+        destination.number = Int(text) ?? 0
     }
 }

@@ -3,6 +3,7 @@
 import UIKit
 
 enum Game {
+    case none
     case spelledOut
     case prime
 }
@@ -22,7 +23,7 @@ class PickGameViewController: UIViewController {
         case "Prime":
             destination.game = .prime
         default:
-            return
+            destination.game = .none
         }
     }
 }
