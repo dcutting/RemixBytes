@@ -1,10 +1,8 @@
 //  Copyright © 2017 cutting.io. All rights reserved.
 
-import UIKit
-
 class GameCoordinator {
 
-    private var window: UIWindow?
+    private var window: WindowWireframe?
     private let pickGameViewFactory = PickGameViewControllerFactory()
     private let pickNumberViewFactory = PickNumberViewControllerFactory()
     private let playGameViewFactory = PlayGameViewControllerFactory()
@@ -13,7 +11,7 @@ class GameCoordinator {
 
     private var playGameView: PlayGameView?
 
-    func start(window: UIWindow) {
+    func start(window: WindowWireframe) {
         self.window = window
 
         showStartView()
@@ -98,6 +96,6 @@ extension GameCoordinator {
 extension GameCoordinator {
 
     private func show(view: Viewable) {
-        window?.rootViewController = view.viewController
+        window?.rootView = view
     }
 }

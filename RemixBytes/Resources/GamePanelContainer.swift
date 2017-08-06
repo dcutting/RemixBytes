@@ -9,7 +9,7 @@ class GamePanelContainerFactory {
     }
 }
 
-class GamePanelContainer: UIViewController {
+class GamePanelContainer: UIViewController, Viewable {
 
     @IBOutlet weak var topLeftContainer: UIView!
     @IBOutlet weak var bottomLeftContainer: UIView!

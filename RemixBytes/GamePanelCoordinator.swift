@@ -1,7 +1,5 @@
 //  Copyright © 2017 cutting.io. All rights reserved.
 
-import UIKit
-
 class GamePanelCoordinator {
 
     private var container: GamePanelContainer?
@@ -13,9 +11,9 @@ class GamePanelCoordinator {
 
     private var playGameView: PlayGameView?
 
-    func start(window: UIWindow) {
+    func start(window: WindowWireframe) {
         container = GamePanelContainerFactory().make()
-        window.rootViewController = container
+        window.rootView = container
 
         showPanel()
         updatePlayGameView()
