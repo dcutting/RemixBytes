@@ -2,7 +2,7 @@
 
 class GameCoordinator {
 
-    private var window: WindowWireframe?
+    private let window: WindowWireframe
     private let pickFeature: PickFeature
     private let playGameViewFactory: PlayGameViewFactory
     private let interactor = LocalPlayInteractor()
@@ -11,14 +11,13 @@ class GameCoordinator {
     private var pickCoordinator: PickCoordinator?
     private var playGameView: PlayGameView?
 
-    init(pickFeature: PickFeature, playGameViewFactory: PlayGameViewFactory) {
+    init(window: WindowWireframe, pickFeature: PickFeature, playGameViewFactory: PlayGameViewFactory) {
+        self.window = window
         self.pickFeature = pickFeature
         self.playGameViewFactory = playGameViewFactory
     }
 
-    func start(window: WindowWireframe) {
-        self.window = window
-
+    func start() {
         showStartView()
     }
 
@@ -32,7 +31,7 @@ extension GameCoordinator: PickCoordinatorDelegate {
     private func startPickFeature() {
         pickCoordinator = pickFeature.makeCoordinator()
         pickCoordinator?.delegate = self
-        pickCoordinator?.start(window: window!)
+        pickCoordinator?.start(window: window)
     }
 
     func didPick(result: PickInteractorResult) {
@@ -79,6 +78,6 @@ extension GameCoordinator {
 extension GameCoordinator {
 
     private func show(view: Viewable) {
-        window?.rootView = view
+        window.rootView = view
     }
 }
