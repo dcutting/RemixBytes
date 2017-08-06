@@ -26,18 +26,19 @@ class GameCoordinatorTests: XCTestCase {
         fakePickNumberViewFactory = FakePickNumberViewFactory(fake: fakePickNumberView)
         fakePlayGameViewFactory = FakePlayGameViewFactory(fake: fakePlayGameView)
 
+        fakeWindow = FakeWindowWireframe()
+
         coordinator = GameCoordinator(
+            window: fakeWindow,
             pickGameViewFactory: fakePickGameViewFactory,
             pickNumberViewFactory: fakePickNumberViewFactory,
             playGameViewFactory: fakePlayGameViewFactory
         )
-
-        fakeWindow = FakeWindowWireframe()
     }
     
     func test_primeFlow() {
 
-        coordinator.start(window: fakeWindow)
+        coordinator.start()
 
         XCTAssertTrue(fakePickGameView === fakeWindow.rootView)
 

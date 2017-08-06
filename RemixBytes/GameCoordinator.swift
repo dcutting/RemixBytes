@@ -2,7 +2,7 @@
 
 class GameCoordinator {
 
-    private var window: WindowWireframe?
+    private let window: WindowWireframe
     private let pickGameViewFactory: PickGameViewFactory
     private let pickNumberViewFactory: PickNumberViewFactory
     private let playGameViewFactory: PlayGameViewFactory
@@ -11,15 +11,14 @@ class GameCoordinator {
 
     private var playGameView: PlayGameView?
 
-    init(pickGameViewFactory: PickGameViewFactory, pickNumberViewFactory: PickNumberViewFactory, playGameViewFactory: PlayGameViewFactory) {
+    init(window: WindowWireframe, pickGameViewFactory: PickGameViewFactory, pickNumberViewFactory: PickNumberViewFactory, playGameViewFactory: PlayGameViewFactory) {
+        self.window = window
         self.pickGameViewFactory = pickGameViewFactory
         self.pickNumberViewFactory = pickNumberViewFactory
         self.playGameViewFactory = playGameViewFactory
     }
 
-    func start(window: WindowWireframe) {
-        self.window = window
-
+    func start() {
         showStartView()
     }
 
@@ -102,6 +101,6 @@ extension GameCoordinator {
 extension GameCoordinator {
 
     private func show(view: Viewable) {
-        window?.rootView = view
+        window.rootView = view
     }
 }

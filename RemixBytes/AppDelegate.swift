@@ -22,20 +22,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func start(window: UIWindow) {
         if UI_USER_INTERFACE_IDIOM() == .pad {
             let coordinator = GamePanelCoordinator(
+                window: window,
                 gamePanelViewFactory: GamePanelViewControllerFactory(),
                 pickGameViewFactory: PickGameViewControllerFactory(),
                 pickNumberViewFactory: PickNumberContinuousViewControllerFactory(),
                 playGameViewFactory: PlayGameContinuousViewControllerFactory()
             )
-            coordinator.start(window: window)
+            coordinator.start()
             self.coordinator = coordinator
         } else {
             let coordinator = GameCoordinator(
+                window: window,
                 pickGameViewFactory: PickGameViewControllerFactory(),
                 pickNumberViewFactory: PickNumberViewControllerFactory(),
                 playGameViewFactory: PlayGameViewControllerFactory()
             )
-            coordinator.start(window: window)
+            coordinator.start()
             self.coordinator = coordinator
         }
     }

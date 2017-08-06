@@ -9,20 +9,20 @@ class GamePanelCoordinator {
     private let gameInteractor = GameInteractor()
     private let playGameFormatter = PlayGameFormatter()
 
-    private var gamePanelView: GamePanelView?
+    private let gamePanelView: GamePanelView
     private var playGameView: PlayGameView?
 
-    init(gamePanelViewFactory: GamePanelViewFactory, pickGameViewFactory: PickGameViewFactory, pickNumberViewFactory: PickNumberViewFactory, playGameViewFactory: PlayGameViewFactory) {
+    init(window: WindowWireframe, gamePanelViewFactory: GamePanelViewFactory, pickGameViewFactory: PickGameViewFactory, pickNumberViewFactory: PickNumberViewFactory, playGameViewFactory: PlayGameViewFactory) {
         self.gamePanelViewFactory = gamePanelViewFactory
         self.pickGameViewFactory = pickGameViewFactory
         self.pickNumberViewFactory = pickNumberViewFactory
         self.playGameViewFactory = playGameViewFactory
-    }
 
-    func start(window: WindowWireframe) {
         gamePanelView = gamePanelViewFactory.make()
         window.rootView = gamePanelView
+    }
 
+    func start() {
         showPanel()
         updatePlayGameView()
     }
@@ -36,18 +36,18 @@ class GamePanelCoordinator {
     private func loadPickGameView() {
         let view = pickGameViewFactory.make()
         view.delegate = self
-        gamePanelView?.topLeft = view
+        gamePanelView.topLeft = view
     }
 
     private func loadPickNumberView() {
         let view = pickNumberViewFactory.make()
         view.delegate = self
-        gamePanelView?.bottomLeft = view
+        gamePanelView.bottomLeft = view
     }
 
     private func loadPlayGameView() {
         let view = playGameViewFactory.make()
-        gamePanelView?.right = view
+        gamePanelView.right = view
         self.playGameView = view
     }
 
