@@ -23,14 +23,16 @@ class PlayGameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        playGame()
+    }
 
-        let result = playGame()
+    private func playGame() {
+        let result = findGameResult()
         let outputText = prepare(result: result)
         outputLabel.text = outputText
     }
 
-    private func playGame() -> GameResult {
-
+    private func findGameResult() -> GameResult {
         switch game {
         case .none:
             return .none
