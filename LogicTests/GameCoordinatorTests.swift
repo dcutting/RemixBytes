@@ -2,7 +2,7 @@
 
 import XCTest
 
-class LogicTests: XCTestCase {
+class GameCoordinatorTests: XCTestCase {
 
     var fakePickGameView: PickGameView!
     var fakePickNumberView: PickNumberView!
