@@ -101,7 +101,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0p6-Yg-Uje">
-                                <rect key="frame" x="16" y="112" width="343" height="60"/>
+                                <rect key="frame" x="16" y="112" width="288" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="WOr-t2-abi"/>
                                 </constraints>
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Adh-fz-Psi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693.75" y="840"/>
+            <point key="canvasLocation" x="135" y="953"/>
         </scene>
         <!--Play Game View Controller-->
         <scene sceneID="s4s-0R-L72">
