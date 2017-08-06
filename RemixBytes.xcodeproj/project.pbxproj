@@ -52,6 +52,8 @@
 		C853119D1F37ABF900388356 /* Fakes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C853119C1F37ABF900388356 /* Fakes.swift */; };
 		C853119E1F37ABF900388356 /* Fakes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C853119C1F37ABF900388356 /* Fakes.swift */; };
 		C85311A01F37B0A800388356 /* GameCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C853119F1F37B0A800388356 /* GameCoordinatorTests.swift */; };
+		C85ED8F21F37C88E0037F230 /* RemoteGameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85ED8F11F37C88E0037F230 /* RemoteGameCoordinator.swift */; };
+		C85ED8F31F37C88E0037F230 /* RemoteGameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85ED8F11F37C88E0037F230 /* RemoteGameCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +93,7 @@
 		C85311991F37A00900388356 /* GamePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePanelView.swift; sourceTree = "<group>"; };
 		C853119C1F37ABF900388356 /* Fakes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fakes.swift; sourceTree = "<group>"; };
 		C853119F1F37B0A800388356 /* GameCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCoordinatorTests.swift; sourceTree = "<group>"; };
+		C85ED8F11F37C88E0037F230 /* RemoteGameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGameCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,7 @@
 				C83674811F3664D00084F644 /* AppDelegate.swift */,
 				C84B1CF61F3683310072257F /* GameCoordinator.swift */,
 				C84B1CF81F36999E0072257F /* GamePanelCoordinator.swift */,
+				C85ED8F11F37C88E0037F230 /* RemoteGameCoordinator.swift */,
 				C8298DF01F37B9B600F59957 /* PickFeature.swift */,
 				C8298DED1F37B8D000F59957 /* PickCoordinator.swift */,
 				C8298DF31F37BA4000F59957 /* PickInteractor.swift */,
@@ -368,6 +372,7 @@
 				C853118A1F374C1C00388356 /* PickGameView.swift in Sources */,
 				C85311781F3746E600388356 /* PlayGameView.swift in Sources */,
 				C8298DEE1F37B8D000F59957 /* PickCoordinator.swift in Sources */,
+				C85ED8F21F37C88E0037F230 /* RemoteGameCoordinator.swift in Sources */,
 				C853117A1F3749A300388356 /* WindowWireframe.swift in Sources */,
 				C836749E1F366C270084F644 /* PickNumberViewController.swift in Sources */,
 				C83674A31F366E450084F644 /* PlayGameViewController.swift in Sources */,
@@ -395,6 +400,7 @@
 				C85311941F374DC400388356 /* WindowWireframe.swift in Sources */,
 				C853119E1F37ABF900388356 /* Fakes.swift in Sources */,
 				C8298DF81F37C52200F59957 /* LocalPlayInteractor.swift in Sources */,
+				C85ED8F31F37C88E0037F230 /* RemoteGameCoordinator.swift in Sources */,
 				C8298DEF1F37B8D000F59957 /* PickCoordinator.swift in Sources */,
 				C853118C1F374DC400388356 /* GamePanelCoordinator.swift in Sources */,
 				C853118E1F374DC400388356 /* PlayGameFormatter.swift in Sources */,

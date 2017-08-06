@@ -10,7 +10,7 @@ class PickFeature {
         self.pickNumberViewFactory = pickNumberViewFactory
     }
 
-    func makeCoordinator(window: WindowWireframe) -> PickCoordinator {
+    func makeCoordinator() -> PickCoordinator {
         return PickCoordinator(
             pickGameViewFactory: pickGameViewFactory,
             pickNumberViewFactory: pickNumberViewFactory

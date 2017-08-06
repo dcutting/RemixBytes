@@ -30,7 +30,7 @@ class GameCoordinator {
 extension GameCoordinator: PickCoordinatorDelegate {
 
     private func startPickFeature() {
-        pickCoordinator = pickFeature.makeCoordinator(window: window!)
+        pickCoordinator = pickFeature.makeCoordinator()
         pickCoordinator?.delegate = self
         pickCoordinator?.start(window: window!)
     }
