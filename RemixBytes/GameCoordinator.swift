@@ -3,16 +3,23 @@
 import UIKit
 
 enum Game {
+    case none
     case spelledOut
     case prime
+}
+
+enum GameResult {
+    case none
+    case spelledOut(Int)
+    case prime(Int, Bool)
 }
 
 class GameCoordinator {
 
     private var window: UIWindow?
 
-    private var game: Game?
-    private var number: Int?
+    private var game = Game.none
+    private var number = 0
 
     private var playGameView: PlayGameViewController?
 
@@ -92,33 +99,45 @@ extension GameCoordinator: PlayGameViewControllerDelegate {
 extension GameCoordinator {
 
     private func playGame() {
-        guard let game = game else { return }
 
-        let result: String
-        switch game {
-        case .spelledOut:
-            result = spelledOutText()
-        case .prime:
-            result = primeText()
-        }
-
-        playGameView?.viewData = PlayGameViewData(result: result)
+        let result = findGameResult()
+        let viewData = prepare(result: result)
+        playGameView?.viewData = viewData
     }
 
-    private func spelledOutText() -> String {
-        guard let number = number else { return "" }
+    private func findGameResult() -> GameResult {
 
+        switch game {
+        case .none:
+            return .none
+        case .spelledOut:
+            return .spelledOut(number)
+        case .prime:
+            return .prime(number, isPrime(n: number))
+        }
+    }
+
+    private func prepare(result: GameResult) -> PlayGameViewData {
+        let outputText: String
+        switch result {
+        case .none:
+            outputText = ""
+        case let .spelledOut(number):
+            outputText = spelledOutText(number: number)
+        case let .prime(number, isPrime):
+            outputText = primeText(number: number, isPrime: isPrime)
+        }
+        return PlayGameViewData(result: outputText)
+    }
+
+    private func spelledOutText(number: Int) -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .spellOut
         return numberFormatter.string(for: number) ?? ""
     }
 
-    private func primeText() -> String {
-        guard let number = number else { return "" }
-
-        let n = Int(number)
-        let result = isPrime(n: n)
-        return result ? "\(n) is prime\n🤓" : "\(n) is not prime\n😔"
+    private func primeText(number: Int, isPrime: Bool) -> String {
+        return isPrime ? "\(number) is prime\n🤓" : "\(number) is not prime\n😔"
     }
 
     private func isPrime(n: Int) -> Bool {
