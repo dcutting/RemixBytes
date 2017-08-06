@@ -24,6 +24,8 @@
 		C84B1D011F37403D0072257F /* PickNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1D001F37403D0072257F /* PickNumberView.swift */; };
 		C84B1D031F3741C70072257F /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1D021F3741C70072257F /* Viewable.swift */; };
 		C84B1D051F3742C50072257F /* PickNumberContinuousViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1D041F3742C50072257F /* PickNumberContinuousViewController.swift */; };
+		C85311761F3746B500388356 /* PlayGameContinuousViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311751F3746B500388356 /* PlayGameContinuousViewController.swift */; };
+		C85311781F3746E600388356 /* PlayGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311771F3746E600388356 /* PlayGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		C84B1D001F37403D0072257F /* PickNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickNumberView.swift; sourceTree = "<group>"; };
 		C84B1D021F3741C70072257F /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
 		C84B1D041F3742C50072257F /* PickNumberContinuousViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickNumberContinuousViewController.swift; sourceTree = "<group>"; };
+		C85311751F3746B500388356 /* PlayGameContinuousViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameContinuousViewController.swift; sourceTree = "<group>"; };
+		C85311771F3746E600388356 /* PlayGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +113,9 @@
 				C84B1D001F37403D0072257F /* PickNumberView.swift */,
 				C836749D1F366C270084F644 /* PickNumberViewController.swift */,
 				C84B1D041F3742C50072257F /* PickNumberContinuousViewController.swift */,
+				C85311771F3746E600388356 /* PlayGameView.swift */,
 				C83674A11F366E450084F644 /* PlayGameViewController.swift */,
+				C85311751F3746B500388356 /* PlayGameContinuousViewController.swift */,
 				C83674851F3664D00084F644 /* Main.storyboard */,
 				C83674A71F3680DA0084F644 /* Resources */,
 			);
@@ -260,10 +266,12 @@
 				C84B1D051F3742C50072257F /* PickNumberContinuousViewController.swift in Sources */,
 				C84B1D011F37403D0072257F /* PickNumberView.swift in Sources */,
 				C84B1CF91F36999E0072257F /* GamePanelCoordinator.swift in Sources */,
+				C85311781F3746E600388356 /* PlayGameView.swift in Sources */,
 				C836749E1F366C270084F644 /* PickNumberViewController.swift in Sources */,
 				C83674A31F366E450084F644 /* PlayGameViewController.swift in Sources */,
 				C83674A61F366F5B0084F644 /* ReplacementSegue.swift in Sources */,
 				C83674821F3664D00084F644 /* AppDelegate.swift in Sources */,
+				C85311761F3746B500388356 /* PlayGameContinuousViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,14 +2,14 @@
 
 import UIKit
 
-class PlayGameViewControllerFactory: PlayGameViewFactory {
+class PlayGameContinuousViewControllerFactory: PlayGameViewFactory {
     func make() -> PlayGameView {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "PlayGameViewController") as! PlayGameViewController
+        return storyboard.instantiateViewController(withIdentifier: "PlayGameContinuousViewController") as! PlayGameContinuousViewController
     }
 }
 
-class PlayGameViewController: UIViewController, PlayGameView {
+class PlayGameContinuousViewController: UIViewController, PlayGameView {
 
     @IBOutlet weak var outputLabel: UILabel!
 
@@ -28,9 +28,5 @@ class PlayGameViewController: UIViewController, PlayGameView {
     private func updateView() {
         guard isViewLoaded else { return }
         outputLabel.text = viewData?.outputText
-    }
-    
-    @IBAction func didTapOK(_ sender: Any) {
-        delegate?.didTapOK()
     }
 }

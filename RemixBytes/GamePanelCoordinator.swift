@@ -7,11 +7,11 @@ class GamePanelCoordinator {
     private var container: GamePanelContainer?
     private let pickGameViewFactory = PickGameViewControllerFactory()
     private let pickNumberViewFactory = PickNumberContinuousViewControllerFactory()
-    private let playGameViewFactory = PlayGameViewControllerFactory()
+    private let playGameViewFactory = PlayGameContinuousViewControllerFactory()
     private let gameInteractor = GameInteractor()
     private let playGameFormatter = PlayGameFormatter()
 
-    private var playGameView: PlayGameViewController?
+    private var playGameView: PlayGameView?
 
     func start(window: UIWindow) {
         container = GamePanelContainerFactory().make()

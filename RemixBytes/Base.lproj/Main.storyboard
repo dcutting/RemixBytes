@@ -270,5 +270,39 @@
             </objects>
             <point key="canvasLocation" x="968" y="953"/>
         </scene>
+        <!--Play Game Continuous View Controller-->
+        <scene sceneID="n3R-yg-m9T">
+            <objects>
+                <viewController storyboardIdentifier="PlayGameContinuousViewController" id="Vro-FT-ue4" customClass="PlayGameContinuousViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l4Z-87-Sdw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4Q-0A-PeG">
+                                <rect key="frame" x="16" y="36" width="288" height="428"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wuX-rU-5LZ" firstAttribute="trailing" secondItem="B4Q-0A-PeG" secondAttribute="trailing" constant="16" id="0wG-VZ-D1d"/>
+                            <constraint firstItem="B4Q-0A-PeG" firstAttribute="leading" secondItem="wuX-rU-5LZ" secondAttribute="leading" constant="16" id="9tC-X3-tCY"/>
+                            <constraint firstItem="B4Q-0A-PeG" firstAttribute="leading" secondItem="wuX-rU-5LZ" secondAttribute="leading" constant="16" id="GTC-2E-ErK"/>
+                            <constraint firstItem="wuX-rU-5LZ" firstAttribute="bottom" secondItem="B4Q-0A-PeG" secondAttribute="bottom" constant="16" id="bzu-mU-NBX"/>
+                            <constraint firstItem="B4Q-0A-PeG" firstAttribute="top" secondItem="wuX-rU-5LZ" secondAttribute="top" constant="16" id="i5l-Jv-47M"/>
+                            <constraint firstItem="wuX-rU-5LZ" firstAttribute="trailing" secondItem="B4Q-0A-PeG" secondAttribute="trailing" constant="16" id="i66-im-9rD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wuX-rU-5LZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="outputLabel" destination="B4Q-0A-PeG" id="0sn-pG-grf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h31-jh-gIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1809" y="953"/>
+        </scene>
     </scenes>
 </document>

@@ -11,7 +11,7 @@ class GameCoordinator {
     private let gameInteractor = GameInteractor()
     private let playGameFormatter = PlayGameFormatter()
 
-    private var playGameView: PlayGameViewController?
+    private var playGameView: PlayGameView?
 
     func start(window: UIWindow) {
         self.window = window
@@ -68,7 +68,7 @@ extension GameCoordinator: PickNumberViewDelegate {
 extension GameCoordinator: PlayGameViewDelegate {
 
     private func showPlayGameView() {
-        let playGameView = playGameViewFactory.make()
+        var playGameView = playGameViewFactory.make()
         playGameView.delegate = self
         self.playGameView = playGameView
         show(view: playGameView)
