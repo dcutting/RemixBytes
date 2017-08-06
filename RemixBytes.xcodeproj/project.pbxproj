@@ -17,6 +17,7 @@
 		C83674A41F366E450084F644 /* PickGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83674A21F366E450084F644 /* PickGameViewController.swift */; };
 		C83674A61F366F5B0084F644 /* ReplacementSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83674A51F366F5B0084F644 /* ReplacementSegue.swift */; };
 		C84B1CF71F3683310072257F /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CF61F3683310072257F /* GameCoordinator.swift */; };
+		C84B1CFB1F369C640072257F /* GamePanelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CFA1F369C640072257F /* GamePanelContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C83674A21F366E450084F644 /* PickGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickGameViewController.swift; sourceTree = "<group>"; };
 		C83674A51F366F5B0084F644 /* ReplacementSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplacementSegue.swift; sourceTree = "<group>"; };
 		C84B1CF61F3683310072257F /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
+		C84B1CFA1F369C640072257F /* GamePanelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePanelContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				C836748A1F3664D00084F644 /* LaunchScreen.storyboard */,
 				C836748D1F3664D00084F644 /* Info.plist */,
 				C83674A51F366F5B0084F644 /* ReplacementSegue.swift */,
+				C84B1CFA1F369C640072257F /* GamePanelContainer.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C84B1CFB1F369C640072257F /* GamePanelContainer.swift in Sources */,
 				C84B1CF71F3683310072257F /* GameCoordinator.swift in Sources */,
 				C83674A41F366E450084F644 /* PickGameViewController.swift in Sources */,
 				C836749E1F366C270084F644 /* PickNumberViewController.swift in Sources */,

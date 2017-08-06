@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="PickGameViewController" id="BYZ-38-t0r" customClass="PickGameViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWL-mX-I5O">
-                                <rect key="frame" x="16" y="36" width="343" height="60"/>
+                                <rect key="frame" x="16" y="36" width="288" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="4dU-aw-JYr"/>
@@ -37,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOU-sm-LHU">
-                                <rect key="frame" x="16" y="112" width="343" height="60"/>
+                                <rect key="frame" x="16" y="112" width="288" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Nwb-vX-Of8"/>
@@ -77,11 +78,11 @@
             <objects>
                 <viewController storyboardIdentifier="PickNumberViewController" id="cqm-fl-PhK" customClass="PickNumberViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="buE-K8-Bi5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoB-bF-qJs">
-                                <rect key="frame" x="16" y="36" width="343" height="60"/>
+                                <rect key="frame" x="16" y="36" width="288" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="yZo-2N-GFH"/>
@@ -100,7 +101,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0p6-Yg-Uje">
-                                <rect key="frame" x="16" y="112" width="343" height="60"/>
+                                <rect key="frame" x="16" y="112" width="288" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="WOr-t2-abi"/>
                                 </constraints>
@@ -128,22 +129,70 @@
             </objects>
             <point key="canvasLocation" x="968.79999999999995" y="136.28185907046478"/>
         </scene>
+        <!--Game Panel Container-->
+        <scene sceneID="6QB-im-LJ1">
+            <objects>
+                <viewController storyboardIdentifier="GamePanelContainer" id="AZm-o9-cJQ" customClass="GamePanelContainer" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="43J-lN-OYm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPa-Ea-qMQ" userLabel="TopLeft">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TE8-rO-VNt" userLabel="Right">
+                                <rect key="frame" x="160" y="0.0" width="160" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahv-bQ-Ujc" userLabel="BottomLeft">
+                                <rect key="frame" x="0.0" y="240" width="160" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22352941179999999" green="0.63921568630000003" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TE8-rO-VNt" firstAttribute="trailing" secondItem="aOX-3A-meX" secondAttribute="trailing" id="08e-Rf-t19"/>
+                            <constraint firstItem="ahv-bQ-Ujc" firstAttribute="top" secondItem="VPa-Ea-qMQ" secondAttribute="bottom" id="5to-Qb-tfO"/>
+                            <constraint firstItem="TE8-rO-VNt" firstAttribute="width" secondItem="43J-lN-OYm" secondAttribute="width" multiplier="0.5" id="881-2T-Uzn"/>
+                            <constraint firstItem="TE8-rO-VNt" firstAttribute="top" secondItem="43J-lN-OYm" secondAttribute="top" id="BUF-OE-75H"/>
+                            <constraint firstItem="VPa-Ea-qMQ" firstAttribute="top" secondItem="43J-lN-OYm" secondAttribute="top" id="ExU-BD-MWf"/>
+                            <constraint firstItem="VPa-Ea-qMQ" firstAttribute="height" secondItem="43J-lN-OYm" secondAttribute="height" multiplier="0.5" id="Jw2-rM-TDr"/>
+                            <constraint firstItem="ahv-bQ-Ujc" firstAttribute="bottom" secondItem="aOX-3A-meX" secondAttribute="bottom" id="WLG-xH-HHa"/>
+                            <constraint firstItem="TE8-rO-VNt" firstAttribute="leading" secondItem="VPa-Ea-qMQ" secondAttribute="trailing" id="brX-Uo-z6L"/>
+                            <constraint firstItem="TE8-rO-VNt" firstAttribute="bottom" secondItem="aOX-3A-meX" secondAttribute="bottom" id="h4r-90-I8t"/>
+                            <constraint firstItem="TE8-rO-VNt" firstAttribute="leading" secondItem="ahv-bQ-Ujc" secondAttribute="trailing" id="inj-l4-Pi4"/>
+                            <constraint firstItem="VPa-Ea-qMQ" firstAttribute="leading" secondItem="aOX-3A-meX" secondAttribute="leading" id="l1t-eC-SNJ"/>
+                            <constraint firstItem="ahv-bQ-Ujc" firstAttribute="leading" secondItem="aOX-3A-meX" secondAttribute="leading" id="z23-L2-Dyq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aOX-3A-meX"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomLeftContainer" destination="ahv-bQ-Ujc" id="pKK-Vx-DPM"/>
+                        <outlet property="rightContainer" destination="TE8-rO-VNt" id="OVj-KM-KPw"/>
+                        <outlet property="topLeftContainer" destination="VPa-Ea-qMQ" id="mBs-cO-rtp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Adh-fz-Psi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693.75" y="840"/>
+        </scene>
         <!--Play Game View Controller-->
         <scene sceneID="s4s-0R-L72">
             <objects>
                 <viewController storyboardIdentifier="PlayGameViewController" id="Wk2-O4-jLH" customClass="PlayGameViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s5H-Jf-Pvf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reA-WI-nTt">
-                                <rect key="frame" x="16" y="112" width="343" height="539"/>
+                                <rect key="frame" x="16" y="112" width="288" height="352"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teC-Vu-OFU">
-                                <rect key="frame" x="16" y="36" width="343" height="60"/>
+                                <rect key="frame" x="16" y="36" width="288" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Oqm-7y-yJL"/>
