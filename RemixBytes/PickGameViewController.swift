@@ -9,14 +9,14 @@ class PickGameViewFactory {
     }
 }
 
-protocol PickGameViewControllerDelegate: class {
+protocol PickGameViewDelegate: class {
     func didPickSpelledOut()
     func didPickPrime()
 }
 
 class PickGameViewController: UIViewController {
 
-    weak var delegate: PickGameViewControllerDelegate?
+    weak var delegate: PickGameViewDelegate?
 
     @IBAction func didTapSpelledOut(_ sender: Any) {
         delegate?.didPickSpelledOut()
