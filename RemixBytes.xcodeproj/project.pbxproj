@@ -183,13 +183,13 @@
 		C8F8FA381F37CEEE005897D2 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				C8F8FA391F37CEEE005897D2 /* Main.storyboard */,
 				C8F8FA3B1F37CEEE005897D2 /* GamePanelViewController.swift */,
 				C8F8FA3C1F37CEEE005897D2 /* PickGameViewController.swift */,
 				C8F8FA3E1F37CEEE005897D2 /* PickNumberViewController.swift */,
 				C8F8FA3D1F37CEEE005897D2 /* PickNumberContinuousViewController.swift */,
 				C8F8FA401F37CEEE005897D2 /* PlayGameViewController.swift */,
 				C8F8FA3F1F37CEEE005897D2 /* PlayGameContinuousViewController.swift */,
+				C8F8FA391F37CEEE005897D2 /* Main.storyboard */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
