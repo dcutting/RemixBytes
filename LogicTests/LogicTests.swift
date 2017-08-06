@@ -39,20 +39,20 @@ class LogicTests: XCTestCase {
 
         coordinator.start(window: fakeWindow)
 
-        XCTAssertEqual(fakePickGameView, fakeWindow.rootView)
+        XCTAssertTrue(fakePickGameView === fakeWindow.rootView)
 
         fakePickGameView.delegate?.didPickPrime()
 
-        XCTAssertEqual(fakePickNumberView, fakeWindow.rootView)
+        XCTAssertTrue(fakePickNumberView === fakeWindow.rootView)
 
         fakePickNumberView.delegate?.didPick(number: 7)
 
-        let actual = fakePlayGameView.viewData
+        let actual = fakePlayGameView.viewData?.outputText
         let expected = "7 is prime\n🤓"
-        XCTAssertEqual(expected, actual?.outputText)
+        XCTAssertEqual(expected, actual)
 
         fakePlayGameView.delegate?.didTapOK()
 
-        XCTAssertEqual(fakePickGameView, fakeWindow.rootView)
+        XCTAssertTrue(fakePickGameView === fakeWindow.rootView)
     }
 }
