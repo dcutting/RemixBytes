@@ -4,7 +4,7 @@ import UIKit
 
 class GameCoordinator {
 
-    private var window: UIWindow?
+    private let window: UIWindow
     private let pickGameViewFactory = PickGameViewControllerFactory()
     private let pickNumberViewFactory = PickNumberViewControllerFactory()
     private let playGameViewFactory = PlayGameViewControllerFactory()
@@ -13,9 +13,11 @@ class GameCoordinator {
 
     private var playGameView: PlayGameView?
 
-    func start(window: UIWindow) {
+    init(window: UIWindow) {
         self.window = window
+    }
 
+    func start() {
         showStartView()
     }
 
@@ -98,6 +100,21 @@ extension GameCoordinator {
 extension GameCoordinator {
 
     private func show(view: Viewable) {
-        window?.rootViewController = view.viewController
+        window.rootViewController = view.viewController
+    }
+
+    private func makePickGameView() -> PickGameViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "PickGameViewController") as! PickGameViewController
+    }
+
+    private func makePickNumberView() -> PickNumberViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "PickNumberViewController") as! PickNumberViewController
+    }
+
+    private func makePlayGameView() -> PlayGameViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "PlayGameViewController") as! PlayGameViewController
     }
 }

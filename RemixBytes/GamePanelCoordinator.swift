@@ -4,19 +4,21 @@ import UIKit
 
 class GamePanelCoordinator {
 
-    private var gamePanelView: GamePanelViewController?
     private let pickGameViewFactory = PickGameViewControllerFactory()
     private let pickNumberViewFactory = PickNumberContinuousViewControllerFactory()
     private let playGameViewFactory = PlayGameContinuousViewControllerFactory()
     private let gameInteractor = GameInteractor()
     private let playGameFormatter = PlayGameFormatter()
 
+    private let gamePanelView: GamePanelViewController
     private var playGameView: PlayGameView?
 
-    func start(window: UIWindow) {
+    init(window: UIWindow) {
         gamePanelView = GamePanelViewControllerFactory().make()
         window.rootViewController = gamePanelView
+    }
 
+    func start() {
         showPanel()
         updatePlayGameView()
     }
@@ -30,18 +32,18 @@ class GamePanelCoordinator {
     private func loadPickGameView() {
         let view = pickGameViewFactory.make()
         view.delegate = self
-        gamePanelView?.topLeft = view
+        gamePanelView.topLeft = view
     }
 
     private func loadPickNumberView() {
         let view = pickNumberViewFactory.make()
         view.delegate = self
-        gamePanelView?.bottomLeft = view
+        gamePanelView.bottomLeft = view
     }
 
     private func loadPlayGameView() {
         let view = playGameViewFactory.make()
-        gamePanelView?.right = view
+        gamePanelView.right = view
         self.playGameView = view
     }
 

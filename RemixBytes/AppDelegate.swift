@@ -21,12 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func start(window: UIWindow) {
         if UI_USER_INTERFACE_IDIOM() == .pad {
-            let coordinator = GamePanelCoordinator()
-            coordinator.start(window: window)
+            let coordinator = GamePanelCoordinator(window: window)
+            coordinator.start()
             self.coordinator = coordinator
         } else {
-            let coordinator = GameCoordinator()
-            coordinator.start(window: window)
+            let coordinator = GameCoordinator(window: window)
+            coordinator.start()
             self.coordinator = coordinator
         }
     }
