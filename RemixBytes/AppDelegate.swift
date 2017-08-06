@@ -31,12 +31,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.coordinator = coordinator
         } else {
             let coordinator = GameCoordinator(
-                pickGameViewFactory: PickGameViewControllerFactory(),
-                pickNumberViewFactory: PickNumberViewControllerFactory(),
+                pickFeature: makePickFeature(),
                 playGameViewFactory: PlayGameViewControllerFactory()
             )
             coordinator.start(window: window)
             self.coordinator = coordinator
         }
+    }
+
+    private func makePickFeature() -> PickFeature {
+        return PickFeature(
+            pickGameViewFactory: PickGameViewControllerFactory(),
+            pickNumberViewFactory: PickNumberViewControllerFactory()
+        )
     }
 }

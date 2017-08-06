@@ -26,9 +26,13 @@ class GameCoordinatorTests: XCTestCase {
         fakePickNumberViewFactory = FakePickNumberViewFactory(fake: fakePickNumberView)
         fakePlayGameViewFactory = FakePlayGameViewFactory(fake: fakePlayGameView)
 
-        coordinator = GameCoordinator(
+        let pickFeature = PickFeature(
             pickGameViewFactory: fakePickGameViewFactory,
-            pickNumberViewFactory: fakePickNumberViewFactory,
+            pickNumberViewFactory: fakePickNumberViewFactory
+        )
+
+        coordinator = GameCoordinator(
+            pickFeature: pickFeature,
             playGameViewFactory: fakePlayGameViewFactory
         )
 

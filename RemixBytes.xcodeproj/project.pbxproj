@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0556DD7E0633CCCCD2EFF11E /* Pods_RemixBytes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7029A2341D297D12A1EB04 /* Pods_RemixBytes.framework */; };
+		C8298DEE1F37B8D000F59957 /* PickCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8298DED1F37B8D000F59957 /* PickCoordinator.swift */; };
+		C8298DEF1F37B8D000F59957 /* PickCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8298DED1F37B8D000F59957 /* PickCoordinator.swift */; };
+		C8298DF11F37B9B600F59957 /* PickFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8298DF01F37B9B600F59957 /* PickFeature.swift */; };
+		C8298DF21F37B9B600F59957 /* PickFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8298DF01F37B9B600F59957 /* PickFeature.swift */; };
+		C8298DF41F37BA4000F59957 /* PickInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8298DF31F37BA4000F59957 /* PickInteractor.swift */; };
+		C8298DF51F37BA4000F59957 /* PickInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8298DF31F37BA4000F59957 /* PickInteractor.swift */; };
+		C8298DF71F37C52200F59957 /* LocalPlayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8298DF61F37C52200F59957 /* LocalPlayInteractor.swift */; };
+		C8298DF81F37C52200F59957 /* LocalPlayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8298DF61F37C52200F59957 /* LocalPlayInteractor.swift */; };
+		C8298DFA1F37C57000F59957 /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8298DF91F37C57000F59957 /* GameInteractor.swift */; };
+		C8298DFB1F37C57000F59957 /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8298DF91F37C57000F59957 /* GameInteractor.swift */; };
 		C83674821F3664D00084F644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83674811F3664D00084F644 /* AppDelegate.swift */; };
 		C83674871F3664D00084F644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83674851F3664D00084F644 /* Main.storyboard */; };
 		C83674891F3664D00084F644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83674881F3664D00084F644 /* Assets.xcassets */; };
@@ -19,7 +29,6 @@
 		C84B1CF71F3683310072257F /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CF61F3683310072257F /* GameCoordinator.swift */; };
 		C84B1CF91F36999E0072257F /* GamePanelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CF81F36999E0072257F /* GamePanelCoordinator.swift */; };
 		C84B1CFB1F369C640072257F /* GamePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CFA1F369C640072257F /* GamePanelViewController.swift */; };
-		C84B1CFD1F371CC00072257F /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CFC1F371CC00072257F /* GameInteractor.swift */; };
 		C84B1CFF1F3730830072257F /* PlayGameFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CFE1F3730830072257F /* PlayGameFormatter.swift */; };
 		C84B1D011F37403D0072257F /* PickNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1D001F37403D0072257F /* PickNumberView.swift */; };
 		C84B1D031F3741C70072257F /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1D021F3741C70072257F /* Viewable.swift */; };
@@ -31,7 +40,6 @@
 		C853118A1F374C1C00388356 /* PickGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311891F374C1C00388356 /* PickGameView.swift */; };
 		C853118B1F374DC400388356 /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CF61F3683310072257F /* GameCoordinator.swift */; };
 		C853118C1F374DC400388356 /* GamePanelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CF81F36999E0072257F /* GamePanelCoordinator.swift */; };
-		C853118D1F374DC400388356 /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CFC1F371CC00072257F /* GameInteractor.swift */; };
 		C853118E1F374DC400388356 /* PlayGameFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CFE1F3730830072257F /* PlayGameFormatter.swift */; };
 		C853118F1F374DC400388356 /* PickGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311891F374C1C00388356 /* PickGameView.swift */; };
 		C85311901F374DC400388356 /* PickNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1D001F37403D0072257F /* PickNumberView.swift */; };
@@ -50,6 +58,11 @@
 		3A7029A2341D297D12A1EB04 /* Pods_RemixBytes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemixBytes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62FDB46E095BA1CA5EC474F8 /* Pods-RemixBytes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemixBytes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemixBytes/Pods-RemixBytes.debug.xcconfig"; sourceTree = "<group>"; };
 		B36800EB3513AFE3935C84B4 /* Pods-RemixBytes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemixBytes.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemixBytes/Pods-RemixBytes.release.xcconfig"; sourceTree = "<group>"; };
+		C8298DED1F37B8D000F59957 /* PickCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickCoordinator.swift; sourceTree = "<group>"; };
+		C8298DF01F37B9B600F59957 /* PickFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickFeature.swift; sourceTree = "<group>"; };
+		C8298DF31F37BA4000F59957 /* PickInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickInteractor.swift; sourceTree = "<group>"; };
+		C8298DF61F37C52200F59957 /* LocalPlayInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalPlayInteractor.swift; sourceTree = "<group>"; };
+		C8298DF91F37C57000F59957 /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
 		C836747E1F3664D00084F644 /* RemixBytes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemixBytes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83674811F3664D00084F644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C83674861F3664D00084F644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +76,6 @@
 		C84B1CF61F3683310072257F /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
 		C84B1CF81F36999E0072257F /* GamePanelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePanelCoordinator.swift; sourceTree = "<group>"; };
 		C84B1CFA1F369C640072257F /* GamePanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePanelViewController.swift; sourceTree = "<group>"; };
-		C84B1CFC1F371CC00072257F /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
 		C84B1CFE1F3730830072257F /* PlayGameFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameFormatter.swift; sourceTree = "<group>"; };
 		C84B1D001F37403D0072257F /* PickNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickNumberView.swift; sourceTree = "<group>"; };
 		C84B1D021F3741C70072257F /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
@@ -143,7 +155,11 @@
 				C83674811F3664D00084F644 /* AppDelegate.swift */,
 				C84B1CF61F3683310072257F /* GameCoordinator.swift */,
 				C84B1CF81F36999E0072257F /* GamePanelCoordinator.swift */,
-				C84B1CFC1F371CC00072257F /* GameInteractor.swift */,
+				C8298DF01F37B9B600F59957 /* PickFeature.swift */,
+				C8298DED1F37B8D000F59957 /* PickCoordinator.swift */,
+				C8298DF31F37BA4000F59957 /* PickInteractor.swift */,
+				C8298DF61F37C52200F59957 /* LocalPlayInteractor.swift */,
+				C8298DF91F37C57000F59957 /* GameInteractor.swift */,
 				C84B1CFE1F3730830072257F /* PlayGameFormatter.swift */,
 				C85311891F374C1C00388356 /* PickGameView.swift */,
 				C83674A21F366E450084F644 /* PickGameViewController.swift */,
@@ -336,19 +352,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8298DF71F37C52200F59957 /* LocalPlayInteractor.swift in Sources */,
 				C84B1CFB1F369C640072257F /* GamePanelViewController.swift in Sources */,
 				C84B1CF71F3683310072257F /* GameCoordinator.swift in Sources */,
 				C83674A41F366E450084F644 /* PickGameViewController.swift in Sources */,
 				C853117C1F3749CA00388356 /* UIWindowWireframe.swift in Sources */,
-				C84B1CFD1F371CC00072257F /* GameInteractor.swift in Sources */,
 				C84B1D031F3741C70072257F /* Viewable.swift in Sources */,
+				C8298DFA1F37C57000F59957 /* GameInteractor.swift in Sources */,
 				C84B1CFF1F3730830072257F /* PlayGameFormatter.swift in Sources */,
+				C8298DF41F37BA4000F59957 /* PickInteractor.swift in Sources */,
 				C853119A1F37A00900388356 /* GamePanelView.swift in Sources */,
 				C84B1D051F3742C50072257F /* PickNumberContinuousViewController.swift in Sources */,
 				C84B1D011F37403D0072257F /* PickNumberView.swift in Sources */,
 				C84B1CF91F36999E0072257F /* GamePanelCoordinator.swift in Sources */,
 				C853118A1F374C1C00388356 /* PickGameView.swift in Sources */,
 				C85311781F3746E600388356 /* PlayGameView.swift in Sources */,
+				C8298DEE1F37B8D000F59957 /* PickCoordinator.swift in Sources */,
 				C853117A1F3749A300388356 /* WindowWireframe.swift in Sources */,
 				C836749E1F366C270084F644 /* PickNumberViewController.swift in Sources */,
 				C83674A31F366E450084F644 /* PlayGameViewController.swift in Sources */,
@@ -356,6 +375,7 @@
 				C853119D1F37ABF900388356 /* Fakes.swift in Sources */,
 				C83674A61F366F5B0084F644 /* ReplacementSegue.swift in Sources */,
 				C83674821F3664D00084F644 /* AppDelegate.swift in Sources */,
+				C8298DF11F37B9B600F59957 /* PickFeature.swift in Sources */,
 				C85311761F3746B500388356 /* PlayGameContinuousViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,15 +386,19 @@
 			files = (
 				C85311A01F37B0A800388356 /* GameCoordinatorTests.swift in Sources */,
 				C85311911F374DC400388356 /* PlayGameView.swift in Sources */,
-				C853118D1F374DC400388356 /* GameInteractor.swift in Sources */,
+				C8298DF21F37B9B600F59957 /* PickFeature.swift in Sources */,
 				C85311931F374DC400388356 /* Viewable.swift in Sources */,
+				C8298DFB1F37C57000F59957 /* GameInteractor.swift in Sources */,
 				C853119B1F37A00900388356 /* GamePanelView.swift in Sources */,
 				C853118B1F374DC400388356 /* GameCoordinator.swift in Sources */,
 				C85311901F374DC400388356 /* PickNumberView.swift in Sources */,
 				C85311941F374DC400388356 /* WindowWireframe.swift in Sources */,
 				C853119E1F37ABF900388356 /* Fakes.swift in Sources */,
+				C8298DF81F37C52200F59957 /* LocalPlayInteractor.swift in Sources */,
+				C8298DEF1F37B8D000F59957 /* PickCoordinator.swift in Sources */,
 				C853118C1F374DC400388356 /* GamePanelCoordinator.swift in Sources */,
 				C853118E1F374DC400388356 /* PlayGameFormatter.swift in Sources */,
+				C8298DF51F37BA4000F59957 /* PickInteractor.swift in Sources */,
 				C853118F1F374DC400388356 /* PickGameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

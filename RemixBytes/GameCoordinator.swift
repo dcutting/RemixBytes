@@ -3,17 +3,16 @@
 class GameCoordinator {
 
     private var window: WindowWireframe?
-    private let pickGameViewFactory: PickGameViewFactory
-    private let pickNumberViewFactory: PickNumberViewFactory
+    private let pickFeature: PickFeature
     private let playGameViewFactory: PlayGameViewFactory
-    private let gameInteractor = GameInteractor()
+    private let interactor = LocalPlayInteractor()
     private let playGameFormatter = PlayGameFormatter()
 
+    private var pickCoordinator: PickCoordinator?
     private var playGameView: PlayGameView?
 
-    init(pickGameViewFactory: PickGameViewFactory, pickNumberViewFactory: PickNumberViewFactory, playGameViewFactory: PlayGameViewFactory) {
-        self.pickGameViewFactory = pickGameViewFactory
-        self.pickNumberViewFactory = pickNumberViewFactory
+    init(pickFeature: PickFeature, playGameViewFactory: PlayGameViewFactory) {
+        self.pickFeature = pickFeature
         self.playGameViewFactory = playGameViewFactory
     }
 
@@ -24,47 +23,25 @@ class GameCoordinator {
     }
 
     private func showStartView() {
-        showPickGameView()
+        startPickFeature()
     }
 }
 
-extension GameCoordinator: PickGameViewDelegate {
+extension GameCoordinator: PickCoordinatorDelegate {
 
-    private func showPickGameView() {
-        let pickGameView = pickGameViewFactory.make()
-        pickGameView.delegate = self
-        show(view: pickGameView)
+    private func startPickFeature() {
+        pickCoordinator = pickFeature.makeCoordinator(window: window!)
+        pickCoordinator?.delegate = self
+        pickCoordinator?.start(window: window!)
     }
 
-    func didPickPrime() {
-        gameInteractor.pickPrime()
-        finishPickGame()
+    func didPick(result: PickInteractorResult) {
+        interactor.pick(pick: result)
+        finishPickFeature()
     }
 
-    func didPickSpelledOut() {
-        gameInteractor.pickSpelledOut()
-        finishPickGame()
-    }
-
-    private func finishPickGame() {
-        showPickNumberView()
-    }
-}
-
-extension GameCoordinator: PickNumberViewDelegate {
-
-    private func showPickNumberView() {
-        let pickNumberView = pickNumberViewFactory.make()
-        pickNumberView.delegate = self
-        show(view: pickNumberView)
-    }
-
-    func didPick(number: Int) {
-        gameInteractor.pick(number: number)
-        finishPickNumber()
-    }
-
-    private func finishPickNumber() {
+    private func finishPickFeature() {
+        pickCoordinator = nil
         showPlayGameView()
     }
 }
@@ -93,7 +70,7 @@ extension GameCoordinator: PlayGameViewDelegate {
 extension GameCoordinator {
 
     private func playGame() {
-        let result = gameInteractor.findGameResult()
+        let result = interactor.findGameResult()
         let viewData = playGameFormatter.prepare(result: result)
         playGameView?.viewData = viewData
     }

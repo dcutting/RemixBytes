@@ -1,11 +1,5 @@
 //  Copyright © 2017 cutting.io. All rights reserved.
 
-enum Game {
-    case none
-    case spelledOut
-    case prime
-}
-
 enum GameResult {
     case none
     case spelledOut(Int)
@@ -14,41 +8,24 @@ enum GameResult {
 
 class GameInteractor {
 
-    private var game = Game.none
-    private var number = 0
+    let pickInteractor = PickInteractor()
+    let localPlayInteractor = LocalPlayInteractor()
 
     func pickPrime() {
-        game = .prime
+        pickInteractor.pickPrime()
     }
 
     func pickSpelledOut() {
-        game = .spelledOut
+        pickInteractor.pickSpelledOut()
     }
 
     func pick(number: Int) {
-        self.number = number
+        pickInteractor.pick(number: number)
     }
 
     func findGameResult() -> GameResult {
-        switch game {
-        case .none:
-            return .none
-        case .spelledOut:
-            return .spelledOut(number)
-        case .prime:
-            return .prime(number, isPrime(n: number))
-        }
-    }
-
-    private func isPrime(n: Int) -> Bool {
-        guard n > 1 else { return false }
-        guard n > 3 else { return true }
-        guard n % 2 != 0, n % 3 != 0 else { return false }
-        var i = 5
-        while i * i <= n {
-            guard n % i != 0, n % (i + 2) != 0 else { return false }
-            i += 6
-        }
-        return true
+        let pickResult = pickInteractor.result()
+        localPlayInteractor.pick(pick: pickResult)
+        return localPlayInteractor.findGameResult()
     }
 }
