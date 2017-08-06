@@ -11,13 +11,10 @@ class PickGameViewController: UIViewController {
             let identifier = segue.identifier
         else { return }
 
-        switch identifier {
-        case "Spelled Out":
+        if identifier == "Spelled Out" {
             destination.game = .spelledOut
-        case "Prime":
+        } else if identifier == "Prime" {
             destination.game = .prime
-        default:
-            destination.game = .none
         }
     }
 }

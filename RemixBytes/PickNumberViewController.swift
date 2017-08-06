@@ -12,10 +12,11 @@ class PickNumberViewController: UIViewController {
 
         guard
             let destination = segue.destination as? PlayGameViewController,
-            let text = numberTextField.text
+            let text = numberTextField.text,
+            let number = Int(text)
         else { return }
 
         destination.game = game
-        destination.number = Int(text) ?? 0
+        destination.number = number
     }
 }
