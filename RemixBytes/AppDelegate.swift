@@ -6,9 +6,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var gameCoordinator: GameCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window?.backgroundColor = .white
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        guard let window = window else { return false }
+
+        window.backgroundColor = .white
+
+        gameCoordinator = GameCoordinator()
+        gameCoordinator?.start(window: window)
+
+        window.makeKeyAndVisible()
+
         return true
     }
 }

@@ -2,22 +2,20 @@
 
 import UIKit
 
+protocol PickGameViewControllerDelegate: class {
+    func didPickSpelledOut()
+    func didPickPrime()
+}
+
 class PickGameViewController: UIViewController {
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    weak var delegate: PickGameViewControllerDelegate?
 
-        guard
-            let destination = segue.destination as? PickNumberViewController,
-            let identifier = segue.identifier
-        else { return }
+    @IBAction func didTapSpelledOut(_ sender: Any) {
+        delegate?.didPickSpelledOut()
+    }
 
-        switch identifier {
-        case "Spelled Out":
-            destination.game = .spelledOut
-        case "Prime":
-            destination.game = .prime
-        default:
-            return
-        }
+    @IBAction func didTapPrime(_ sender: Any) {
+        delegate?.didPickPrime()
     }
 }

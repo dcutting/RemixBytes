@@ -2,20 +2,22 @@
 
 import UIKit
 
+protocol PickNumberViewControllerDelegate: class {
+    func didPick(number: Int)
+}
+
 class PickNumberViewController: UIViewController {
+
+    weak var delegate: PickNumberViewControllerDelegate?
 
     @IBOutlet weak var numberTextField: UITextField!
     
-    var game: Game?
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+    @IBAction func didTapGo(_ sender: Any) {
         guard
-            let destination = segue.destination as? PlayGameViewController,
-            let text = numberTextField.text
+            let text = numberTextField.text,
+            let number = Int(text)
         else { return }
 
-        destination.game = game
-        destination.number = Int(text)
+        delegate?.didPick(number: number)
     }
 }
