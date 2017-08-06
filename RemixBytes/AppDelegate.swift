@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func start(window: UIWindow) {
-        let coordinator = GameCoordinator()
-        coordinator.start(window: window)
+        let coordinator = GameCoordinator(window: window)
+        coordinator.start()
         self.coordinator = coordinator
     }
 }

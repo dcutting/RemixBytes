@@ -16,16 +16,18 @@ enum GameResult {
 
 class GameCoordinator {
 
-    private var window: UIWindow?
+    private let window: UIWindow
 
     private var game = Game.none
     private var number = 0
 
     private var playGameView: PlayGameViewController?
 
-    func start(window: UIWindow) {
+    init(window: UIWindow) {
         self.window = window
+    }
 
+    func start() {
         showStartView()
     }
 
@@ -154,7 +156,7 @@ extension GameCoordinator {
 extension GameCoordinator {
 
     private func show(view: UIViewController) {
-        window?.rootViewController = view
+        window.rootViewController = view
     }
 
     private func makePickGameView() -> PickGameViewController {
