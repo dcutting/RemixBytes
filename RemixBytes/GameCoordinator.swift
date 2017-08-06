@@ -25,7 +25,7 @@ class GameCoordinator {
 extension GameCoordinator: PickGameViewDelegate {
 
     private func showPickGameView() {
-        let pickGameView = pickGameViewFactory.make()
+        var pickGameView = pickGameViewFactory.make()
         pickGameView.delegate = self
         show(view: pickGameView)
     }

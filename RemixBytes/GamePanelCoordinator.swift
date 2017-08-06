@@ -26,7 +26,7 @@ class GamePanelCoordinator {
     }
 
     private func loadPickGameView() {
-        let view = pickGameViewFactory.make()
+        var view = pickGameViewFactory.make()
         view.delegate = self
         container?.topLeft = view
     }

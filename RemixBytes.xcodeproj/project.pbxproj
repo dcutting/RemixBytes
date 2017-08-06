@@ -28,6 +28,7 @@
 		C85311781F3746E600388356 /* PlayGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311771F3746E600388356 /* PlayGameView.swift */; };
 		C853117A1F3749A300388356 /* WindowWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311791F3749A300388356 /* WindowWireframe.swift */; };
 		C853117C1F3749CA00388356 /* UIWindowWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C853117B1F3749CA00388356 /* UIWindowWireframe.swift */; };
+		C853118A1F374C1C00388356 /* PickGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311891F374C1C00388356 /* PickGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		C85311771F3746E600388356 /* PlayGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameView.swift; sourceTree = "<group>"; };
 		C85311791F3749A300388356 /* WindowWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowWireframe.swift; sourceTree = "<group>"; };
 		C853117B1F3749CA00388356 /* UIWindowWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowWireframe.swift; sourceTree = "<group>"; };
+		C85311891F374C1C00388356 /* PickGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				C84B1CF81F36999E0072257F /* GamePanelCoordinator.swift */,
 				C84B1CFC1F371CC00072257F /* GameInteractor.swift */,
 				C84B1CFE1F3730830072257F /* PlayGameFormatter.swift */,
+				C85311891F374C1C00388356 /* PickGameView.swift */,
 				C83674A21F366E450084F644 /* PickGameViewController.swift */,
 				C84B1D001F37403D0072257F /* PickNumberView.swift */,
 				C836749D1F366C270084F644 /* PickNumberViewController.swift */,
@@ -273,6 +276,7 @@
 				C84B1D051F3742C50072257F /* PickNumberContinuousViewController.swift in Sources */,
 				C84B1D011F37403D0072257F /* PickNumberView.swift in Sources */,
 				C84B1CF91F36999E0072257F /* GamePanelCoordinator.swift in Sources */,
+				C853118A1F374C1C00388356 /* PickGameView.swift in Sources */,
 				C85311781F3746E600388356 /* PlayGameView.swift in Sources */,
 				C853117A1F3749A300388356 /* WindowWireframe.swift in Sources */,
 				C836749E1F366C270084F644 /* PickNumberViewController.swift in Sources */,
