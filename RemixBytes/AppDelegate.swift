@@ -6,7 +6,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var gameCoordinator: Any?
+    var coordinator: Any?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -20,15 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func start(window: UIWindow) {
-        
         if UI_USER_INTERFACE_IDIOM() == .pad {
             let coordinator = GamePanelCoordinator()
             coordinator.start(window: window)
-            gameCoordinator = coordinator
+            self.coordinator = coordinator
         } else {
             let coordinator = GameCoordinator()
             coordinator.start(window: window)
-            gameCoordinator = coordinator
+            self.coordinator = coordinator
         }
     }
 }

@@ -29,8 +29,7 @@ class GameInteractor {
         self.number = number
     }
 
-    func playGame() -> GameResult {
-
+    func findGameResult() -> GameResult {
         switch game {
         case .none:
             return .none

@@ -88,7 +88,7 @@ extension GameCoordinator: PlayGameViewControllerDelegate {
 extension GameCoordinator {
 
     private func playGame() {
-        let result = gameInteractor.playGame()
+        let result = gameInteractor.findGameResult()
         let viewData = prepare(result: result)
         playGameView?.viewData = viewData
     }
