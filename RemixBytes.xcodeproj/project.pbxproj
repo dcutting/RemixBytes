@@ -21,6 +21,9 @@
 		C84B1CFB1F369C640072257F /* GamePanelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CFA1F369C640072257F /* GamePanelContainer.swift */; };
 		C84B1CFD1F371CC00072257F /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CFC1F371CC00072257F /* GameInteractor.swift */; };
 		C84B1CFF1F3730830072257F /* PlayGameFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1CFE1F3730830072257F /* PlayGameFormatter.swift */; };
+		C84B1D011F37403D0072257F /* PickNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1D001F37403D0072257F /* PickNumberView.swift */; };
+		C84B1D031F3741C70072257F /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1D021F3741C70072257F /* Viewable.swift */; };
+		C84B1D051F3742C50072257F /* PickNumberContinuousViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B1D041F3742C50072257F /* PickNumberContinuousViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		C84B1CFA1F369C640072257F /* GamePanelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePanelContainer.swift; sourceTree = "<group>"; };
 		C84B1CFC1F371CC00072257F /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
 		C84B1CFE1F3730830072257F /* PlayGameFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameFormatter.swift; sourceTree = "<group>"; };
+		C84B1D001F37403D0072257F /* PickNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickNumberView.swift; sourceTree = "<group>"; };
+		C84B1D021F3741C70072257F /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
+		C84B1D041F3742C50072257F /* PickNumberContinuousViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickNumberContinuousViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +106,9 @@
 				C84B1CFC1F371CC00072257F /* GameInteractor.swift */,
 				C84B1CFE1F3730830072257F /* PlayGameFormatter.swift */,
 				C83674A21F366E450084F644 /* PickGameViewController.swift */,
+				C84B1D001F37403D0072257F /* PickNumberView.swift */,
 				C836749D1F366C270084F644 /* PickNumberViewController.swift */,
+				C84B1D041F3742C50072257F /* PickNumberContinuousViewController.swift */,
 				C83674A11F366E450084F644 /* PlayGameViewController.swift */,
 				C83674851F3664D00084F644 /* Main.storyboard */,
 				C83674A71F3680DA0084F644 /* Resources */,
@@ -116,6 +124,7 @@
 				C836748D1F3664D00084F644 /* Info.plist */,
 				C83674A51F366F5B0084F644 /* ReplacementSegue.swift */,
 				C84B1CFA1F369C640072257F /* GamePanelContainer.swift */,
+				C84B1D021F3741C70072257F /* Viewable.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -246,7 +255,10 @@
 				C84B1CF71F3683310072257F /* GameCoordinator.swift in Sources */,
 				C83674A41F366E450084F644 /* PickGameViewController.swift in Sources */,
 				C84B1CFD1F371CC00072257F /* GameInteractor.swift in Sources */,
+				C84B1D031F3741C70072257F /* Viewable.swift in Sources */,
 				C84B1CFF1F3730830072257F /* PlayGameFormatter.swift in Sources */,
+				C84B1D051F3742C50072257F /* PickNumberContinuousViewController.swift in Sources */,
+				C84B1D011F37403D0072257F /* PickNumberView.swift in Sources */,
 				C84B1CF91F36999E0072257F /* GamePanelCoordinator.swift in Sources */,
 				C836749E1F366C270084F644 /* PickNumberViewController.swift in Sources */,
 				C83674A31F366E450084F644 /* PlayGameViewController.swift in Sources */,

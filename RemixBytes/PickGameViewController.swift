@@ -14,7 +14,7 @@ protocol PickGameViewDelegate: class {
     func didPickPrime()
 }
 
-class PickGameViewController: UIViewController {
+class PickGameViewController: UIViewController, Viewable {
 
     weak var delegate: PickGameViewDelegate?
 

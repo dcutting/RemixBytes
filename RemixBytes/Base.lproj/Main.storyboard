@@ -233,5 +233,42 @@
             </objects>
             <point key="canvasLocation" x="1810" y="136"/>
         </scene>
+        <!--Pick Number Continuous View Controller-->
+        <scene sceneID="c9j-dH-Wuj">
+            <objects>
+                <viewController storyboardIdentifier="PickNumberContinuousViewController" id="XDW-Nd-ob6" customClass="PickNumberContinuousViewController" customModule="RemixBytes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e2d-TF-Y5a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BGm-9m-X8y">
+                                <rect key="frame" x="16" y="36" width="288" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="00t-zi-YIf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="numberDidChange:" destination="XDW-Nd-ob6" eventType="editingChanged" id="Kso-Ms-56k"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OP1-BB-BZM" firstAttribute="trailing" secondItem="BGm-9m-X8y" secondAttribute="trailing" constant="16" id="aZ1-w1-4IT"/>
+                            <constraint firstItem="BGm-9m-X8y" firstAttribute="leading" secondItem="OP1-BB-BZM" secondAttribute="leading" constant="16" id="h1A-GJ-dII"/>
+                            <constraint firstItem="BGm-9m-X8y" firstAttribute="top" secondItem="OP1-BB-BZM" secondAttribute="top" constant="16" id="nGp-1B-gXD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OP1-BB-BZM"/>
+                    </view>
+                    <connections>
+                        <outlet property="numberTextField" destination="BGm-9m-X8y" id="Rcf-Ls-kqO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6j-Bn-LSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="953"/>
+        </scene>
     </scenes>
 </document>

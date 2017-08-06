@@ -50,7 +50,7 @@ extension GameCoordinator: PickGameViewDelegate {
 extension GameCoordinator: PickNumberViewDelegate {
 
     private func showPickNumberView() {
-        let pickNumberView = pickNumberViewFactory.make()
+        var pickNumberView = pickNumberViewFactory.make()
         pickNumberView.delegate = self
         show(view: pickNumberView)
     }
@@ -97,7 +97,7 @@ extension GameCoordinator {
 
 extension GameCoordinator {
 
-    private func show(view: UIViewController) {
-        window?.rootViewController = view
+    private func show(view: Viewable) {
+        window?.rootViewController = view.viewController
     }
 }

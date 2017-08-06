@@ -2,18 +2,14 @@
 
 import UIKit
 
-class PickNumberViewControllerFactory {
-    func make() -> PickNumberViewController {
+class PickNumberViewControllerFactory: PickNumberViewFactory {
+    func make() -> PickNumberView {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "PickNumberViewController") as! PickNumberViewController
     }
 }
 
-protocol PickNumberViewDelegate: class {
-    func didPick(number: Int)
-}
-
-class PickNumberViewController: UIViewController {
+class PickNumberViewController: UIViewController, PickNumberView {
 
     weak var delegate: PickNumberViewDelegate?
 

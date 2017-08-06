@@ -15,19 +15,19 @@ class GamePanelContainer: UIViewController {
     @IBOutlet weak var bottomLeftContainer: UIView!
     @IBOutlet weak var rightContainer: UIView!
 
-    var topLeft: UIViewController? {
+    var topLeft: Viewable? {
         didSet {
             configurePanel(child: topLeft, childContainer: topLeftContainer)
         }
     }
 
-    var bottomLeft: UIViewController? {
+    var bottomLeft: Viewable? {
         didSet {
             configurePanel(child: bottomLeft, childContainer: bottomLeftContainer)
         }
     }
 
-    var right: UIViewController? {
+    var right: Viewable? {
         didSet {
             configurePanel(child: right, childContainer: rightContainer)
         }
@@ -40,9 +40,9 @@ class GamePanelContainer: UIViewController {
         configurePanel(child: right, childContainer: rightContainer)
     }
 
-    private func configurePanel(child: UIViewController?, childContainer: UIView?) {
+    private func configurePanel(child: Viewable?, childContainer: UIView?) {
         guard
-            let child = child,
+            let child = child?.viewController,
             let childContainer = childContainer
         else { return }
         addChildViewController(child)

@@ -17,7 +17,7 @@ struct PlayGameViewData {
     let outputText: String
 }
 
-class PlayGameViewController: UIViewController {
+class PlayGameViewController: UIViewController, Viewable {
 
     @IBOutlet weak var outputLabel: UILabel!
 
