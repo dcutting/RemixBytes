@@ -2,7 +2,7 @@
 
 import UIKit
 
-protocol PlayGameViewControllerDelegate: class {
+protocol PlayGameViewDelegate: class {
     func didTapOK()
 }
 
@@ -14,7 +14,7 @@ class PlayGameViewController: UIViewController {
 
     @IBOutlet weak var outputLabel: UILabel!
 
-    weak var delegate: PlayGameViewControllerDelegate?
+    weak var delegate: PlayGameViewDelegate?
     var viewData: PlayGameViewData? {
         didSet {
             updateView()

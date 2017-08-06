@@ -2,13 +2,13 @@
 
 import UIKit
 
-protocol PickNumberViewControllerDelegate: class {
+protocol PickNumberViewDelegate: class {
     func didPick(number: Int)
 }
 
 class PickNumberViewController: UIViewController {
 
-    weak var delegate: PickNumberViewControllerDelegate?
+    weak var delegate: PickNumberViewDelegate?
 
     @IBOutlet weak var numberTextField: UITextField!
     
