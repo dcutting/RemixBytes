@@ -29,6 +29,7 @@
 		C853117A1F3749A300388356 /* WindowWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311791F3749A300388356 /* WindowWireframe.swift */; };
 		C853117C1F3749CA00388356 /* UIWindowWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C853117B1F3749CA00388356 /* UIWindowWireframe.swift */; };
 		C853118A1F374C1C00388356 /* PickGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311891F374C1C00388356 /* PickGameView.swift */; };
+		C85311961F374DFC00388356 /* UIViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311951F374DFC00388356 /* UIViewable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		C85311791F3749A300388356 /* WindowWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowWireframe.swift; sourceTree = "<group>"; };
 		C853117B1F3749CA00388356 /* UIWindowWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowWireframe.swift; sourceTree = "<group>"; };
 		C85311891F374C1C00388356 /* PickGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameView.swift; sourceTree = "<group>"; };
+		C85311951F374DFC00388356 /* UIViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				C84B1D021F3741C70072257F /* Viewable.swift */,
 				C85311791F3749A300388356 /* WindowWireframe.swift */,
 				C853117B1F3749CA00388356 /* UIWindowWireframe.swift */,
+				C85311951F374DFC00388356 /* UIViewable.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				C85311781F3746E600388356 /* PlayGameView.swift in Sources */,
 				C853117A1F3749A300388356 /* WindowWireframe.swift in Sources */,
 				C836749E1F366C270084F644 /* PickNumberViewController.swift in Sources */,
+				C85311961F374DFC00388356 /* UIViewable.swift in Sources */,
 				C83674A31F366E450084F644 /* PlayGameViewController.swift in Sources */,
 				C83674A61F366F5B0084F644 /* ReplacementSegue.swift in Sources */,
 				C83674821F3664D00084F644 /* AppDelegate.swift in Sources */,
