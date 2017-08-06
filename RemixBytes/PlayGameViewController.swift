@@ -2,7 +2,7 @@
 
 import UIKit
 
-class PlayGameViewFactory {
+class PlayGameViewControllerFactory {
     func make() -> PlayGameViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "PlayGameViewController") as! PlayGameViewController

@@ -5,9 +5,9 @@ import UIKit
 class GameCoordinator {
 
     private var window: UIWindow?
-    private let pickGameViewFactory = PickGameViewFactory()
-    private let pickNumberViewFactory = PickNumberViewFactory()
-    private let playGameViewFactory = PlayGameViewFactory()
+    private let pickGameViewFactory = PickGameViewControllerFactory()
+    private let pickNumberViewFactory = PickNumberViewControllerFactory()
+    private let playGameViewFactory = PlayGameViewControllerFactory()
     private let gameInteractor = GameInteractor()
     private let playGameFormatter = PlayGameFormatter()
 

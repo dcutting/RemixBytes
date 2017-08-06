@@ -2,7 +2,7 @@
 
 import UIKit
 
-class PickNumberViewFactory {
+class PickNumberViewControllerFactory {
     func make() -> PickNumberViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "PickNumberViewController") as! PickNumberViewController
