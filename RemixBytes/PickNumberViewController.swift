@@ -2,6 +2,13 @@
 
 import UIKit
 
+class PickNumberViewFactory {
+    func make() -> PickNumberViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "PickNumberViewController") as! PickNumberViewController
+    }
+}
+
 protocol PickNumberViewControllerDelegate: class {
     func didPick(number: Int)
 }

@@ -2,17 +2,13 @@
 
 import UIKit
 
-enum Game {
-    case spelledOut
-    case prime
-}
-
 class GameCoordinator {
 
     private var window: UIWindow?
-
-    private var game: Game?
-    private var number: Int?
+    private let pickGameViewFactory = PickGameViewFactory()
+    private let pickNumberViewFactory = PickNumberViewFactory()
+    private let playGameViewFactory = PlayGameViewFactory()
+    private let gameInteractor = GameInteractor()
 
     private var playGameView: PlayGameViewController?
 
@@ -30,18 +26,18 @@ class GameCoordinator {
 extension GameCoordinator: PickGameViewControllerDelegate {
 
     private func showPickGameView() {
-        let pickGameView = makePickGameView()
+        let pickGameView = pickGameViewFactory.make()
         pickGameView.delegate = self
         show(view: pickGameView)
     }
 
     func didPickPrime() {
-        game = .prime
+        gameInteractor.pickPrime()
         finishPickGame()
     }
 
     func didPickSpelledOut() {
-        game = .spelledOut
+        gameInteractor.pickSpelledOut()
         finishPickGame()
     }
 
@@ -53,13 +49,13 @@ extension GameCoordinator: PickGameViewControllerDelegate {
 extension GameCoordinator: PickNumberViewControllerDelegate {
 
     private func showPickNumberView() {
-        let pickNumberView = makePickNumberView()
+        let pickNumberView = pickNumberViewFactory.make()
         pickNumberView.delegate = self
         show(view: pickNumberView)
     }
 
     func didPick(number: Int) {
-        self.number = number
+        gameInteractor.pick(number: number)
         finishPickNumber()
     }
 
@@ -71,7 +67,7 @@ extension GameCoordinator: PickNumberViewControllerDelegate {
 extension GameCoordinator: PlayGameViewControllerDelegate {
 
     private func showPlayGameView() {
-        let playGameView = makePlayGameView()
+        let playGameView = playGameViewFactory.make()
         playGameView.delegate = self
         self.playGameView = playGameView
         show(view: playGameView)
@@ -92,45 +88,32 @@ extension GameCoordinator: PlayGameViewControllerDelegate {
 extension GameCoordinator {
 
     private func playGame() {
-        guard let game = game else { return }
-
-        let result: String
-        switch game {
-        case .spelledOut:
-            result = spelledOutText()
-        case .prime:
-            result = primeText()
-        }
-
-        playGameView?.viewData = PlayGameViewData(result: result)
+        let result = gameInteractor.playGame()
+        let viewData = prepare(result: result)
+        playGameView?.viewData = viewData
     }
 
-    private func spelledOutText() -> String {
-        guard let number = number else { return "" }
+    private func prepare(result: GameResult) -> PlayGameViewData {
+        let outputText: String
+        switch result {
+        case .none:
+            outputText = ""
+        case let .spelledOut(number):
+            outputText = spelledOutText(number: number)
+        case let .prime(number, isPrime):
+            outputText = primeText(number: number, isPrime: isPrime)
+        }
+        return PlayGameViewData(outputText: outputText)
+    }
 
+    private func spelledOutText(number: Int) -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .spellOut
         return numberFormatter.string(for: number) ?? ""
     }
 
-    private func primeText() -> String {
-        guard let number = number else { return "" }
-
-        let n = Int(number)
-        let result = isPrime(n: n)
-        return result ? "\(n) is prime\n🤓" : "\(n) is not prime\n😔"
-    }
-
-    private func isPrime(n: Int) -> Bool {
-        guard n > 1 else { return false }
-        guard n > 3 else { return true }
-        guard n % 2 != 0, n % 3 != 0 else { return false }
-        var i = 5
-        while i * i <= n {
-            guard n % i != 0, n % (i + 2) != 0 else { return false }
-            i += 6
-        }
-        return true
+    private func primeText(number: Int, isPrime: Bool) -> String {
+        return isPrime ? "\(number) is prime\n🤓" : "\(number) is not prime\n😔"
     }
 }
 
@@ -138,20 +121,5 @@ extension GameCoordinator {
 
     private func show(view: UIViewController) {
         window?.rootViewController = view
-    }
-
-    private func makePickGameView() -> PickGameViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "PickGameViewController") as! PickGameViewController
-    }
-
-    private func makePickNumberView() -> PickNumberViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "PickNumberViewController") as! PickNumberViewController
-    }
-
-    private func makePlayGameView() -> PlayGameViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "PlayGameViewController") as! PlayGameViewController
     }
 }

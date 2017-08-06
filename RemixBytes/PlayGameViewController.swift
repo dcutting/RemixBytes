@@ -2,12 +2,19 @@
 
 import UIKit
 
+class PlayGameViewFactory {
+    func make() -> PlayGameViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "PlayGameViewController") as! PlayGameViewController
+    }
+}
+
 protocol PlayGameViewControllerDelegate: class {
     func didTapOK()
 }
 
 struct PlayGameViewData {
-    let result: String
+    let outputText: String
 }
 
 class PlayGameViewController: UIViewController {
@@ -28,7 +35,7 @@ class PlayGameViewController: UIViewController {
 
     private func updateView() {
         guard isViewLoaded else { return }
-        outputLabel.text = viewData?.result
+        outputLabel.text = viewData?.outputText
     }
     
     @IBAction func didTapOK(_ sender: Any) {
