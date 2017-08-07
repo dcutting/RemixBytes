@@ -102,19 +102,4 @@ extension GameCoordinator {
     private func show(view: Viewable) {
         window.rootViewController = view.viewController
     }
-
-    private func makePickGameView() -> PickGameViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "PickGameViewController") as! PickGameViewController
-    }
-
-    private func makePickNumberView() -> PickNumberViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "PickNumberViewController") as! PickNumberViewController
-    }
-
-    private func makePlayGameView() -> PlayGameViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "PlayGameViewController") as! PlayGameViewController
-    }
 }
