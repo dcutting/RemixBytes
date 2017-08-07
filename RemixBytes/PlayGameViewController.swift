@@ -30,7 +30,7 @@ class PlayGameViewController: UIViewController {
         guard isViewLoaded else { return }
         outputLabel.text = viewData?.result
     }
-    
+
     @IBAction func didTapOK(_ sender: Any) {
         delegate?.didTapOK()
     }
