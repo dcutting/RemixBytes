@@ -4,32 +4,32 @@ import XCTest
 
 class GameCoordinatorTests: XCTestCase {
 
-    var fakePickGameView: PickGameView!
-    var fakePickNumberView: PickNumberView!
-    var fakePlayGameView: PlayGameView!
+    var pickGameView: PickGameView!
+    var pickNumberView: PickNumberView!
+    var playGameView: PlayGameView!
 
     var fakePickGameViewFactory: FakePickGameViewFactory!
     var fakePickNumberViewFactory: FakePickNumberViewFactory!
     var fakePlayGameViewFactory: FakePlayGameViewFactory!
 
-    var fakeWindow: FakeWindowWireframe!
+    var window: FakeWindowWireframe!
 
     var coordinator: GameCoordinator!
 
     override func setUp() {
 
-        fakePickGameView = FakePickGameView()
-        fakePickNumberView = FakePickNumberView()
-        fakePlayGameView = FakePlayGameView()
+        pickGameView = FakePickGameView()
+        pickNumberView = FakePickNumberView()
+        playGameView = FakePlayGameView()
 
-        fakePickGameViewFactory = FakePickGameViewFactory(fake: fakePickGameView)
-        fakePickNumberViewFactory = FakePickNumberViewFactory(fake: fakePickNumberView)
-        fakePlayGameViewFactory = FakePlayGameViewFactory(fake: fakePlayGameView)
+        fakePickGameViewFactory = FakePickGameViewFactory(fake: pickGameView)
+        fakePickNumberViewFactory = FakePickNumberViewFactory(fake: pickNumberView)
+        fakePlayGameViewFactory = FakePlayGameViewFactory(fake: playGameView)
 
-        fakeWindow = FakeWindowWireframe()
+        window = FakeWindowWireframe()
 
         coordinator = GameCoordinator(
-            window: fakeWindow,
+            window: window,
             pickGameViewFactory: fakePickGameViewFactory,
             pickNumberViewFactory: fakePickNumberViewFactory,
             playGameViewFactory: fakePlayGameViewFactory
@@ -40,20 +40,22 @@ class GameCoordinatorTests: XCTestCase {
 
         coordinator.start()
 
-        XCTAssertTrue(fakePickGameView === fakeWindow.rootView)
+        XCTAssertTrue(pickGameView === window.rootView)
 
-        fakePickGameView.delegate?.didPickPrime()
+        pickGameView.delegate?.didPickPrime()
 
-        XCTAssertTrue(fakePickNumberView === fakeWindow.rootView)
+        XCTAssertTrue(pickNumberView === window.rootView)
 
-        fakePickNumberView.delegate?.didPick(number: 7)
+        pickNumberView.delegate?.didPick(number: 7)
 
-        let actual = fakePlayGameView.viewData?.outputText
+        XCTAssertTrue(playGameView === window.rootView)
+
+        let actual = playGameView.viewData?.outputText
         let expected = "7 is prime\n🤓"
         XCTAssertEqual(expected, actual)
 
-        fakePlayGameView.delegate?.didTapOK()
+        playGameView.delegate?.didTapOK()
 
-        XCTAssertTrue(fakePickGameView === fakeWindow.rootView)
+        XCTAssertTrue(pickGameView === window.rootView)
     }
 }
