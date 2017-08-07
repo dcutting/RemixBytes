@@ -14,5 +14,5 @@ struct PlayGameViewData {
 
 protocol PlayGameView: Viewable {
     var delegate: PlayGameViewDelegate? { get set }
-var viewData: PlayGameViewData? { get set }
+    var viewData: PlayGameViewData? { get set }
 }
